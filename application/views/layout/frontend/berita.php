@@ -6,7 +6,7 @@
             <div class="owl-carousel owl-theme mt-5">
                 <div class="item">
                     <div class="card border-0 mb-5">
-                        <img src="<?php echo base_url('assets/assets/assets/img/Mask Group 2.png');?>" class="card-img-top" alt="...">
+                        <img src="<?php echo base_url('assets/frontend/assets/img/Mask Group 2.png');?>" class="card-img-top" alt="...">
                         <div class="card-body">
                             <small class="teks font-weight-bold">PERISTIWA</small> 
                             <small class="float-right teks font-weight-lighter">8 jam yang lalu</small>
@@ -18,7 +18,7 @@
                 </div>
                 <div class="item">
                     <div class="card border-0 mb-5">
-                        <img src="<?php echo base_url('assets/assets/assets/img/Mask Group 2.png');?>" class="card-img-top" alt="...">
+                        <img src="<?php echo base_url('assets/frontend/assets/img/Mask Group 2.png');?>" class="card-img-top" alt="...">
                         <div class="card-body">
                             <small class="teks font-weight-bold">PERISTIWA</small> 
                             <small class="float-right teks font-weight-lighter">8 jam yang lalu</small>
@@ -30,7 +30,7 @@
                 </div>
                 <div class="item">
                     <div class="card border-0 mb-5">
-                        <img src="<?php echo base_url('assets/assets/assets/img/Mask Group 2.png');?>" class="card-img-top" alt="...">
+                        <img src="<?php echo base_url('assets/frontend/assets/img/Mask Group 2.png');?>" class="card-img-top" alt="...">
                         <div class="card-body">
                             <small class="teks font-weight-bold">PERISTIWA</small> 
                             <small class="float-right teks font-weight-lighter">8 jam yang lalu</small>
@@ -42,7 +42,7 @@
                 </div>
                 <div class="item">
                     <div class="card border-0 mb-5">
-                        <img src="<?php echo base_url('assets/assets/assets/img/Mask Group 2.png');?>" class="card-img-top" alt="...">
+                        <img src="<?php echo base_url('assets/frontend/assets/img/Mask Group 2.png');?>" class="card-img-top" alt="...">
                         <div class="card-body">
                             <small class="teks font-weight-bold">PERISTIWA</small> 
                             <small class="float-right teks font-weight-lighter">8 jam yang lalu</small>
@@ -54,7 +54,7 @@
                 </div>
                 <div class="item">
                     <div class="card border-0 mb-5">
-                        <img src="<?php echo base_url('assets/assets/assets/img/Mask Group 2.png');?>" class="card-img-top" alt="...">
+                        <img src="<?php echo base_url('assets/frontend/assets/img/Mask Group 2.png');?>" class="card-img-top" alt="...">
                         <div class="card-body">
                             <small class="teks font-weight-bold">PERISTIWA</small> 
                             <small class="float-right teks font-weight-lighter">8 jam yang lalu</small>

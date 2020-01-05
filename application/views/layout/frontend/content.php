@@ -19,13 +19,13 @@
                         </ol>
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                            <img src="<?php echo base_url('assets/assets/assets/img/Mask Group 3.png');?>" class="d-block w-100" alt="..." style="height: 458px;">
+                            <img src="<?php echo base_url('assets/frontend/assets/img/Mask Group 3.png');?>" class="d-block w-100" alt="..." style="height: 458px;">
                             </div>
                             <div class="carousel-item">
-                            <img src="<?php echo base_url('assets/assets/assets/img/Mask Group 3.png');?>" class="d-block w-100" alt="..." style="height: 458px;">
+                            <img src="<?php echo base_url('assets/frontend/assets/img/Mask Group 3.png');?>" class="d-block w-100" alt="..." style="height: 458px;">
                             </div>
                             <div class="carousel-item">
-                            <img src="<?php echo base_url('assets/assets/assets/img/Mask Group 3.png');?>" class="d-block w-100" alt="..." style="height: 458px;">
+                            <img src="<?php echo base_url('assets/frontend/assets/img/Mask Group 3.png');?>" class="d-block w-100" alt="..." style="height: 458px;">
                             </div>
                         </div>
                     </div>

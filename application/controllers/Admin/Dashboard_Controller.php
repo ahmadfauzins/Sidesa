@@ -27,10 +27,11 @@ class Dashboard_Controller extends CI_Controller
 
   	public function index()
  	{
-		 if ($this->session->userdata('role') === '2') {
+		if ($this->session->userdata('role') === '2') {
 			$this->load->view('layout/backend/header');
+			$this->load->view('layout/backend/topbar');
 			$this->load->view('layout/backend/sidebar');
-			$this->load->view('admin/dashboard');
+			$this->load->view('pages/admin/dashboard');
 			$this->load->view('layout/backend/footer');
 		 } else {
 			echo "

@@ -1,5 +1,3 @@
-
-
     <!-- start carousel -->
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
@@ -13,7 +11,7 @@
                         </button>
                     </div>
                 </div>
-                <img src="<?php echo base_url('assets/assets/assets/img/Mask Group 1.png');?>" class="d-block w-100" alt="...">
+                <img src="<?php echo base_url('assets/frontend/assets/img/Mask Group 1.png');?>" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
                 <div class="container">
@@ -25,7 +23,7 @@
                         </button>
                     </div>
                 </div>
-                <img src="<?php echo base_url('assets/assets/assets/img/Mask Group 1.png');?>" class="d-block w-100" alt="...">
+                <img src="<?php echo base_url('assets/frontend/assets/img/Mask Group 1.png');?>" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
                 <div class="container">
@@ -37,17 +35,17 @@
                         </button>
                     </div>
                 </div>
-                <img src="<?php echo base_url('assets/assets/assets/img/Mask Group 1.png');?>" class="d-block w-100" alt="...">
+                <img src="<?php echo base_url('assets/frontend/assets/img/Mask Group 1.png');?>" class="d-block w-100" alt="...">
             </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-            <img src="<?php echo base_url('assets/assets/assets/icon/ic_arrow_left.png');?>" alt="">
+            <img src="<?php echo base_url('assets/frontend/assets/icon/ic_arrow_left.png');?>" alt="">
             <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span> -->
             <span class="sr-only">Previous</span>
         </a>
         <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
             <!-- <span class="carousel-control-next-icon" aria-hidden="true"></span> -->
-            <img src="<?php echo base_url('assets/assets/assets/icon/ic_arrow_right.png');?>" alt="">
+            <img src="<?php echo base_url('assets/frontend/assets/icon/ic_arrow_right.png');?>" alt="">
             <span class="sr-only">Next</span>
         </a>
     </div>

@@ -2,7 +2,7 @@
  <!-- start navbar -->
  <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light">
         <div class="container">
-            <a class="navbar-brand" href="#"><img src="<?php echo base_url('assets/assets/assets/icon/logo.png');?>" alt=""></a>
+            <a class="navbar-brand" href="#"><img src="<?php echo base_url('assets/frontend/assets/icon/logo.png');?>" alt=""></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -30,7 +30,7 @@
             </div>
             <div class="btn-group btn-group-toggle btn-navbar" data-toggle="buttons">
                 <button class="btn btn-light rounded-0 p-2 tombol">
-                    <img src="<?php echo base_url('assets/assets/assets/icon/search.png');?>" alt="" class="px-3">
+                    <img src="<?php echo base_url('assets/frontend/assets/icon/search.png');?>" alt="" class="px-3">
                 </button>
                 <button type ="button" class="btn rounded-0 btn-color tombol"><a href="<?= base_url();?>auth">
                     <span>LOGIN</span></a>

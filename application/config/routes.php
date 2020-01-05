@@ -68,6 +68,9 @@ $route['sa/dashboard']	= 'Superadmin/Dashboard_Controller';
 // Admin
 // ------------------------------------------------------------------------
 $route['a/dashboard']	= 'Admin/Dashboard_Controller';
+$route['a/rt']			= 'Admin/RT_Controller';
+$route['a/rt/add']		= 'Admin/RT_Controller/add';
+$route['a/rt/insert']	= 'Admin/RT_Controller/insert';
 
 // ------------------------------------------------------------------------
 // Jurnalis
