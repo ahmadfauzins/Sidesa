@@ -4,7 +4,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 /**
  *
- * Controller Berita_Controller
+ * Controller Jurnalis_Controller
  *
  * This controller for ...
  *
@@ -15,7 +15,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
  *
  */
 
-class Berita_Controller extends CI_Controller
+class Jurnalis_Controller extends CI_Controller
 {
 	public function __construct()
 	{
@@ -28,14 +28,13 @@ class Berita_Controller extends CI_Controller
 	
 	public function index()
 	{
-		if ($this->session->userdata('role') === '3') {
-			$id = $this->session->userdata('id');
-			$data['jurnalis'] = $this->db->query("SELECT * FROM artikel WHERE user_id='$id'")->result();
-			$x['jurnalis'] = $this->db->get_where('auth', ['id' => $this->session->userdata('id')])->row_array();
+		if ($this->session->userdata('role') === '2') {
+			$data['jurnalis'] = $this->M_Jurnalis->get_data()->result();
+			$x['admin'] = $this->db->get_where('auth', ['id' => $this->session->userdata('id')])->row_array();
 			$this->load->view('layout/backend/header');
-			$this->load->view('layout/backend/topbar',$x);
+			$this->load->view('layout/backend/topbar', $x);
 			$this->load->view('layout/backend/sidebar');
-			$this->load->view('pages/jurnalis/berita/index', $data);
+			$this->load->view('pages/admin/jurnalis/index', $data);
 			$this->load->view('layout/backend/footer');
 		} else {
 			echo "
@@ -45,22 +44,22 @@ class Berita_Controller extends CI_Controller
 				</script>
 			";
 		}
-  	}
+	}
 
 	public function add()
 	{
-		if ($this->session->userdata('role') === '3') {
-			$x['jurnalis'] = $this->db->get_where('auth', ['id' => $this->session->userdata('id')])->row_array();
+		if ($this->session->userdata('role') === '2') {
+			$x['admin'] = $this->db->get_where('auth', ['id' => $this->session->userdata('id')])->row_array();
 			$this->load->view('layout/backend/header');
 			$this->load->view('layout/backend/topbar', $x);
 			$this->load->view('layout/backend/sidebar');
-			$this->load->view('pages/jurnalis/berita/add');
+			$this->load->view('pages/admin/jurnalis/add');
 			$this->load->view('layout/backend/footer');
 		} else {
 			echo "
 				<script>
 					alert('Access Denied');
-				  	history.go(-1);
+					history.go(-1);
 				</script>
 			";
 		}
@@ -68,15 +67,14 @@ class Berita_Controller extends CI_Controller
 
 	public function insert()
     {
-		$title                  = $this->input->post('title');
-		$slug					= slug($this->input->post('title',TRUE));
-		$type           		= $this->input->post('type');
-		$body           		= $this->input->post('body');
-		$img 				    = $_FILES['foto'];
+		$name                   = $this->input->post('name');
+		$email           		= $this->input->post('email');
+		$password               = $this->input->post('password');
+		$img 				    =$_FILES['foto'];
 		if ($img = '') {
 			$img = 'default.png';
 		} else {
-			$config['upload_path']		= './assets/backend/img/artikel';
+			$config['upload_path']		= './assets/backend/img/avatar';
 			$config['allowed_types']	= 'jpg|png|jpeg';
 			$config['max_size']			= 2048;
 			$this->load->library('upload',$config);
@@ -87,21 +85,20 @@ class Berita_Controller extends CI_Controller
 			}
 		}
 		$data= array(
-			'user_id'		=> $this->session->userdata('id'),
-			'title'			=> $title,
-			'slug'			=> $slug,
-			'type'			=> $type,
+			'name'			=> $name,
+			'email'			=> $email,
+			'password'		=> sha1($password),
 			'img'			=> $img,
-			'body'			=> $body
+			'role'			=> '3'
 		);
 		
-		$this->M_Artikel->insert_data($data, 'artikel');
-		redirect('j/berita');
-	}
+		$this->M_Jurnalis->insert_data($data, 'auth');
+		redirect('a/jurnalis');
+	}	
 
 	public function delete($id)
     {
-		$result				= $this->M_Artikel->check_img($id);
+		$result				= $this->M_Jurnalis->check_img($id);
 		if($result->num_rows() > 0)
 		{
 			$data	= $result->row_array();
@@ -109,16 +106,16 @@ class Berita_Controller extends CI_Controller
 
 			if($foto != 'default.png')
 			{
-				$target_file	= './assets/backend/img/artikel/'.$foto;
+				$target_file	= './assets/backend/img/avatar/'.$foto;
 				unlink($target_file);
 			}
 		}
 		$where = array('id' => $id);
-		$this->M_Artikel->delete_data($where, 'artikel');
-		redirect('j/berita');     
+		$this->M_Jurnalis->delete_data($where, 'auth');
+		redirect('a/jurnalis');     
     }
 }
 
 
-/* End of file Berita_Controller.php */
-/* Location: ./application/controllers/Berita_Controller.php */
+/* End of file RT_Controller.php */
+/* Location: ./application/controllers/RT_Controller.php */

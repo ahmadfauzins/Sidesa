@@ -31,10 +31,7 @@
 				<li><a class="nav-link" href="<?php echo base_url('a/warga')?>"><i class="fas fa-users"></i> <span>Data Warga</span></a></li>
 				<li><a class="nav-link" href="<?php echo base_url('a/user')?>"><i class="fas fa-user-circle"></i> <span>Data User</span></a></li>
 				<li><a class="nav-link" href="<?php echo base_url('a/rt')?>"><i class="fas fa-user-tie"></i> <span>Data RT/RW</span></a></li>
-				<!-- <li><a class="nav-link" href="<?php echo base_url('a/warga')?>"><i class="fas fa-users"></i> <span>Data Warga</span></a></li>
-				<li><a class="nav-link" href="<?php echo base_url('a/user')?>"><i class="fas fa-user-circle"></i> <span>Data User</span></a></li>
-				<li><a class="nav-link" href="<?php echo base_url('a/rt')?>"><i class="fas fa-user-tie"></i> <span>Data RT/RW</span></a></li> -->
-				<li><a class="nav-link" href="#"><i class="fas fa-file-signature"></i> <span>Data Jurnalis</span></a></li>
+				<li><a class="nav-link" href="<?php echo base_url('a/jurnalis')?>"><i class="fas fa-file-signature"></i> <span>Data Jurnalis</span></a></li>
 				<li><a class="nav-link" href="#"><i class="fas fa-comments"></i> <span>Data Komentar</span></a></li>
 
 				<li class="menu-header">Setting</li>
@@ -62,9 +59,9 @@
 				<li><a class="nav-link" href="<?php echo base_url('j/berita') ?>"><i class="fas fa-file-signature"></i> <span>Data Berita</span></a></li>
 				
 				<li class="menu-header">Setting</li>
-				<li><a class="nav-link" href="#"><i class="fas fa-user-edit"></i> <span>Edit Profil</span></a></li>
-				<li><a class="nav-link" href="#"><i class="fas fa-lock"></i> <span>Ubah Password</span></a></li>
-				<li><a class="nav-link" href="#"><i class="fas fa-sign-out-alt"></i> <span>Logout</span></a></li>
+				<li><a class="nav-link" href="<?php echo base_url('j/profile/edit') ?>"><i class="fas fa-user-edit"></i> <span>Edit Profil</span></a></li>
+				<li><a class="nav-link" href="<?php echo base_url('j/profile/changepassword') ?>"><i class="fas fa-lock"></i> <span>Ubah Password</span></a></li>
+				<li><a class="nav-link" href="<?= base_url('auth/logout')?>"><i class="fas fa-sign-out-alt"></i> <span>Logout</span></a></li>
 			</ul>
 		<?php } elseif ($this->session->userdata('role') === '4') { ?>
 			<ul class="sidebar-menu">

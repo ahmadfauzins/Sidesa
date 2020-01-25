@@ -13,7 +13,7 @@
 	<link rel="stylesheet" href="<?= base_url('')?>assets/backend/modules/jqvmap/dist/jqvmap.min.css">
 	<link rel="stylesheet" href="<?= base_url('')?>assets/backend/modules/weather-icons/css/weather-icons.min.css">
 	<link rel="stylesheet" href="<?= base_url('')?>assets/backend/modules/weather-icons/css/weather-icons-wind.min.css">
-	<link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.1/summernote.css" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote-bs4.css" rel="stylesheet">
 	
 	<!-- Template CSS -->
 	<link rel="stylesheet" href="<?= base_url('')?>assets/backend/css/style.css">

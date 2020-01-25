@@ -28,8 +28,9 @@ class Dashboard_Controller extends CI_Controller
   	public function index()
  	{
 		if ($this->session->userdata('role') === '3') {
+			$data['jurnalis'] = $this->db->get_where('auth', ['id' => $this->session->userdata('id')])->row_array();
 			$this->load->view('layout/backend/header');
-			$this->load->view('layout/backend/topbar');
+			$this->load->view('layout/backend/topbar', $data);
 			$this->load->view('layout/backend/sidebar');
 			$this->load->view('pages/jurnalis/dashboard');
 			$this->load->view('layout/backend/footer');

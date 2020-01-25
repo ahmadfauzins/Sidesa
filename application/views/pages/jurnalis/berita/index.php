@@ -29,9 +29,7 @@
 									<tr>
 										<td><?= $no++?></td>
 										<td><?= $jurnal->title?></td>
-										<td><?= 
-											$body = $jurnal->body;
-											?>
+										<td><?= $jurnal->body?>
 										</td>
 										<td><?= $jurnal->type?></td>
 										<td><img src="<?= base_url('assets/backend/img/artikel/').$jurnal->img?>" alt="" width="50px"></td>

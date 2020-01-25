@@ -172,7 +172,7 @@ class RT_Controller extends CI_Controller
 			$data	= $result->row_array();
 			$foto	= $data['img'];
 
-			if($foto != NULL)
+			if($foto != 'default.png')
 			{
 				$target_file	= './assets/backend/img/foto_rt/'.$foto;
 				unlink($target_file);

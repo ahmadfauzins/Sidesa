@@ -11,7 +11,7 @@
 	<script src="<?= base_url('')?>assets/backend/modules/chart.js/dist/chart.min.js"></script>
 	<script src="<?= base_url('')?>assets/backend/modules/jqvmap/dist/jquery.vmap.min.js"></script>
 	<script src="<?= base_url('')?>assets/backend/modules/jqvmap/dist/maps/jquery.vmap.world.js"></script>
-	<script src="<?= base_url('')?>assets/backend/modules/summernote/dist/summernote-bs4.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote-bs4.js"></script>
 	<script src="<?= base_url('')?>assets/backend/modules/chocolat/dist/js/jquery.chocolat.min.js"></script>
 	
 	<!-- Template JS File -->

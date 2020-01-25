@@ -199,7 +199,7 @@ class Warga_Controller extends CI_Controller
 			$data	= $result->row_array();
 			$foto	= $data['img'];
 
-			if($foto != NULL)
+			if($foto != 'default.png')
 			{
 				$target_file	= './assets/backend/img/foto_warga/'.$foto;
 				unlink($target_file);
