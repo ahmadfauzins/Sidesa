@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 25 Jan 2020 pada 11.55
+-- Waktu pembuatan: 25 Jan 2020 pada 14.15
 -- Versi server: 10.4.11-MariaDB
 -- Versi PHP: 7.4.1
 
@@ -46,7 +46,8 @@ CREATE TABLE `artikel` (
 --
 
 INSERT INTO `artikel` (`id`, `user_id`, `title`, `slug`, `type`, `img`, `body`, `status`, `is_approved`, `date`) VALUES
-(2, 20, 'Coba', 'coba', 'Pendidikan', 'default.png', 'Coba', 0, 0, '2020-01-25 09:57:12');
+(8, 20, 'Lorem Ipsum', 'lorem-ipsum', 'Pendidikan', 'Untitled.png', '<h2 style=\"margin-right: 0px; margin-bottom: 10px; margin-left: 0px; padding: 0px; font-weight: 400; line-height: 24px; font-family: DauphinPlain; font-size: 24px;\">What is Lorem Ipsum?</h2><p style=\"margin-right: 0px; margin-bottom: 15px; margin-left: 0px; padding: 0px; text-align: justify; font-family: &quot;Open Sans&quot;, Arial, sans-serif;\"><strong style=\"margin: 0px; padding: 0px;\">Lorem Ipsum</strong>&nbsp;is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>', 0, 0, '2020-01-25 12:20:01'),
+(9, 22, 'Coba cba', 'coba-cba', 'Ekonomi', 'ss.png', '<h2 style=\"margin-right: 0px; margin-bottom: 10px; margin-left: 0px; padding: 0px; font-weight: 400; line-height: 24px; font-family: DauphinPlain; font-size: 24px;\">What is Lorem Ipsum?</h2><p style=\"margin-right: 0px; margin-bottom: 15px; margin-left: 0px; padding: 0px; text-align: justify; font-family: &quot;Open Sans&quot;, Arial, sans-serif;\"><strong style=\"margin: 0px; padding: 0px;\">Lorem Ipsum</strong>&nbsp;is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>', 0, 0, '2020-01-25 12:58:13');
 
 -- --------------------------------------------------------
 
@@ -70,7 +71,8 @@ CREATE TABLE `auth` (
 INSERT INTO `auth` (`id`, `email`, `name`, `password`, `img`, `role`) VALUES
 (18, 'superadmin@karangsari.desa.id', 'Fauzi', '441c9d45e54ac3321c25f0e346cef5396ae6088f', 'default.png', 1),
 (19, 'admin@karangsari.desa.id', 'Ryan', 'af3dbfe86368370bdf2ec7456944df627c8865f5', 'default.png', 2),
-(20, 'jurnalis@karangsari.desa.id', 'Ibnu', 'ef5d5e12b7c277b6beb10df250c150cc1145c43c', 'default.png', 3);
+(20, 'jurnalis@karangsari.desa.id', 'Ibnu Soffyan', 'ef5d5e12b7c277b6beb10df250c150cc1145c43c', 'download1.png', 3),
+(22, 'didin@gmail.com', 'Didin', '1d28cc17f60d3f92e02a83eeef330e4165859d04', 'download2.png', 3);
 
 -- --------------------------------------------------------
 
@@ -226,13 +228,13 @@ ALTER TABLE `warga`
 -- AUTO_INCREMENT untuk tabel `artikel`
 --
 ALTER TABLE `artikel`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT untuk tabel `auth`
 --
 ALTER TABLE `auth`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT untuk tabel `rekomendasi`
