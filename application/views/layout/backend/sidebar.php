@@ -59,7 +59,7 @@
 				<li><a class="nav-link" href="<?php echo base_url('j/dashboard') ?>"><i class="fas fa-home"></i> <span>Dashboard</span></a></li>
 				
 				<li class="menu-header">Master Data</li>
-				<li><a class="nav-link" href="#"><i class="fas fa-file-signature"></i> <span>Data Berita</span></a></li>
+				<li><a class="nav-link" href="<?php echo base_url('j/berita') ?>"><i class="fas fa-file-signature"></i> <span>Data Berita</span></a></li>
 				
 				<li class="menu-header">Setting</li>
 				<li><a class="nav-link" href="#"><i class="fas fa-user-edit"></i> <span>Edit Profil</span></a></li>

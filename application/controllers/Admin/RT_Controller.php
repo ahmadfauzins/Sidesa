@@ -33,8 +33,6 @@ class RT_Controller extends CI_Controller
 			$x['admin'] = $this->db->get_where('auth', ['id' => $this->session->userdata('id')])->row_array();
 			$this->load->view('layout/backend/header');
 			$this->load->view('layout/backend/topbar', $x);
-			$this->load->view('layout/backend/header');
-			$this->load->view('layout/backend/topbar');
 			$this->load->view('layout/backend/sidebar');
 			$this->load->view('pages/admin/rt/index', $data);
 			$this->load->view('layout/backend/footer');
@@ -54,8 +52,6 @@ class RT_Controller extends CI_Controller
 			$x['admin'] = $this->db->get_where('auth', ['id' => $this->session->userdata('id')])->row_array();
 			$this->load->view('layout/backend/header');
 			$this->load->view('layout/backend/topbar', $x);
-			$this->load->view('layout/backend/header');
-			$this->load->view('layout/backend/topbar');
 			$this->load->view('layout/backend/sidebar');
 			$this->load->view('pages/admin/rt/add');
 			$this->load->view('layout/backend/footer');
@@ -109,8 +105,6 @@ class RT_Controller extends CI_Controller
 			
 			$this->load->view('layout/backend/header');
 			$this->load->view('layout/backend/topbar',$x);
-			$this->load->view('layout/backend/header');
-			$this->load->view('layout/backend/topbar');
 			$this->load->view('layout/backend/sidebar');
 			$this->load->view('pages/admin/rt/edit', $data);
 			$this->load->view('layout/backend/footer');

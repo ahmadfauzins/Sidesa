@@ -35,8 +35,6 @@ class Warga_Controller extends CI_Controller
 
 			$this->load->view('layout/backend/header');
 			$this->load->view('layout/backend/topbar', $x);
-			$this->load->view('layout/backend/header');
-			$this->load->view('layout/backend/topbar');
 			$this->load->view('layout/backend/sidebar');
 			$this->load->view('pages/rt/warga/index', $data);
 			$this->load->view('layout/backend/footer');
@@ -56,8 +54,6 @@ class Warga_Controller extends CI_Controller
 			$x['rt'] = $this->db->get_where('rt', ['id' => $this->session->userdata('id')])->row_array();
 			$this->load->view('layout/backend/header');
 			$this->load->view('layout/backend/topbar', $x);
-			$this->load->view('layout/backend/header');
-			$this->load->view('layout/backend/topbar');
 			$this->load->view('layout/backend/sidebar');
 			$this->load->view('pages/rt/warga/add');
 			$this->load->view('layout/backend/footer');
@@ -122,8 +118,6 @@ class Warga_Controller extends CI_Controller
 			
 			$this->load->view('layout/backend/header');
 			$this->load->view('layout/backend/topbar', $x);
-			$this->load->view('layout/backend/header');
-			$this->load->view('layout/backend/topbar');
 			$this->load->view('layout/backend/sidebar');
 			$this->load->view('pages/rt/warga/edit', $data);
 			$this->load->view('layout/backend/footer');

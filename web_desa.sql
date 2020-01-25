@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.0.1
+-- version 4.9.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 08 Jan 2020 pada 14.12
--- Versi server: 10.3.16-MariaDB
--- Versi PHP: 7.3.6
+-- Waktu pembuatan: 25 Jan 2020 pada 11.55
+-- Versi server: 10.4.11-MariaDB
+-- Versi PHP: 7.4.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -21,6 +21,32 @@ SET time_zone = "+00:00";
 --
 -- Database: `web_desa`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `artikel`
+--
+
+CREATE TABLE `artikel` (
+  `id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `title` varchar(100) NOT NULL,
+  `slug` varchar(100) NOT NULL,
+  `type` varchar(50) NOT NULL,
+  `img` varchar(100) NOT NULL DEFAULT 'default.png',
+  `body` text NOT NULL,
+  `status` tinyint(1) NOT NULL DEFAULT 0,
+  `is_approved` tinyint(1) NOT NULL DEFAULT 0,
+  `date` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `artikel`
+--
+
+INSERT INTO `artikel` (`id`, `user_id`, `title`, `slug`, `type`, `img`, `body`, `status`, `is_approved`, `date`) VALUES
+(2, 20, 'Coba', 'coba', 'Pendidikan', 'default.png', 'Coba', 0, 0, '2020-01-25 09:57:12');
 
 -- --------------------------------------------------------
 
@@ -45,29 +71,6 @@ INSERT INTO `auth` (`id`, `email`, `name`, `password`, `img`, `role`) VALUES
 (18, 'superadmin@karangsari.desa.id', 'Fauzi', '441c9d45e54ac3321c25f0e346cef5396ae6088f', 'default.png', 1),
 (19, 'admin@karangsari.desa.id', 'Ryan', 'af3dbfe86368370bdf2ec7456944df627c8865f5', 'default.png', 2),
 (20, 'jurnalis@karangsari.desa.id', 'Ibnu', 'ef5d5e12b7c277b6beb10df250c150cc1145c43c', 'default.png', 3);
-
--- --------------------------------------------------------
-
---
--- Struktur dari tabel `berita`
---
-
-CREATE TABLE `berita` (
-  `id_berita` int(11) NOT NULL,
-  `nama_kategori` varchar(200) NOT NULL,
-  `judul_berita` text NOT NULL,
-  `isi_berita` text NOT NULL,
-  `pengirim` varchar(150) NOT NULL,
-  `tanggal` datetime NOT NULL,
-  `foto_berita` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data untuk tabel `berita`
---
-
-INSERT INTO `berita` (`id_berita`, `nama_kategori`, `judul_berita`, `isi_berita`, `pengirim`, `tanggal`, `foto_berita`) VALUES
-(1, 'hutan', 'Tersesat Seminggu di Hutan Kaltara, WN Australia Ditemukan Selamat', 'Malinau - Warga negara (WN) Australia ditemukan selamat setelah satu minggu tersesat di hutan Kabupaten Malinau, Provinsi Kalimantan Utara (Kaltara). Pria bernama Stephen Leonard dalam kondisi lemas ketika ditemukan.\r\n\r\nKomandan SSK I Pos Apauping Satagas Pamtas RI-Malaysia Yonif Raider 303/SSM Kostrad, Lettu Inf Suhendra, mengatakan, Stephen dan seorang warga bernama Mukhtar tersesat setelah ditinggalkan oleh pemadu wisata Desa Long Layu saat sedang berwisata di hutan kawasan Long Tua, Desa Apauping, Kecamatan Bahau Ulu, Kabupaten Malinau.\r\n\"Mereka seminggu tersesat. Keduanya ditinggalkan dengan dibekali logistik yang terbatas. Kondisinya sangat lemah,\" ujar Suhendra, Sabtu (4/1/2020).\r\nSuhendra menjelaskan, kabar adanya seorang wisatawan dan seorang pemandu wisata hilang di dalam hutan berawal dari informasi yang diterima dari warga. Pihaknya menurunkan delapan personel Satgas di bawah pimpinan Serda Satria Situmorang bersama warga lainnya langsung melakukan pencarian pada Kamis (2/1) lalu.\r\n\"Setelah informasi itu diterima anggota, lalu anggota bersama warga langsung melakukan pencarian. Anggota masuk ke dalam hutan dan menyisir sekitar Sungai Bahau,\" kata Suhendra.\r\n\r\nKeduanya ditemukan di hulu Sungai Bahau dalam kondisi drop. Keduanya langsung dievakuasi, serta diistirahatkan di kediaman Kepala Desa Apauping.\r\n\r\n\"Sudah dievakuasi dan sekarang menunggu petunjuk lebih lanjut dari Polres Malinau,\" ujar Suhendra. (dkp/dkp)', 'suhendra', '0000-00-00 00:00:00', 'tersesat.jpg');
 
 -- --------------------------------------------------------
 
@@ -174,17 +177,19 @@ INSERT INTO `warga` (`id`, `nik`, `name`, `tempat_lahir`, `tgl_lahir`, `jk`, `bl
 --
 
 --
+-- Indeks untuk tabel `artikel`
+--
+ALTER TABLE `artikel`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `slug` (`slug`),
+  ADD KEY `user_id` (`user_id`);
+
+--
 -- Indeks untuk tabel `auth`
 --
 ALTER TABLE `auth`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `email` (`email`);
-
---
--- Indeks untuk tabel `berita`
---
-ALTER TABLE `berita`
-  ADD PRIMARY KEY (`id_berita`);
 
 --
 -- Indeks untuk tabel `rekomendasi`
@@ -218,16 +223,16 @@ ALTER TABLE `warga`
 --
 
 --
+-- AUTO_INCREMENT untuk tabel `artikel`
+--
+ALTER TABLE `artikel`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
 -- AUTO_INCREMENT untuk tabel `auth`
 --
 ALTER TABLE `auth`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
-
---
--- AUTO_INCREMENT untuk tabel `berita`
---
-ALTER TABLE `berita`
-  MODIFY `id_berita` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT untuk tabel `rekomendasi`
@@ -256,6 +261,12 @@ ALTER TABLE `warga`
 --
 -- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
 --
+
+--
+-- Ketidakleluasaan untuk tabel `artikel`
+--
+ALTER TABLE `artikel`
+  ADD CONSTRAINT `artikel_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `auth` (`id`);
 
 --
 -- Ketidakleluasaan untuk tabel `rekomendasi`

@@ -61,18 +61,18 @@ $route['auth_rt'] = 'Auth/rt';
 // ------------------------------------------------------------------------
 // Superadmin
 // ------------------------------------------------------------------------
-$route['sa/dashboard']	= 'Superadmin/Dashboard_Controller';
+$route['sa/dashboard']				= 'Superadmin/Dashboard_Controller';
 
 // ------------------------------------------------------------------------
 // Admin
 // ------------------------------------------------------------------------
-$route['a/dashboard']			= 'Admin/Dashboard_Controller';
-$route['a/rt']					= 'Admin/RT_Controller';
-$route['a/rt/add']				= 'Admin/RT_Controller/add';
-$route['a/rt/insert']			= 'Admin/RT_Controller/insert';
-$route['a/rt/edit/(:any)']		= 'Admin/RT_Controller/edit/$1';
-$route['a/rt/update']			= 'Admin/RT_Controller/update';
-$route['a/rt/delete/(:any)']	= 'Admin/RT_Controller/delete/$1';
+$route['a/dashboard']				= 'Admin/Dashboard_Controller';
+$route['a/rt']						= 'Admin/RT_Controller';
+$route['a/rt/add']					= 'Admin/RT_Controller/add';
+$route['a/rt/insert']				= 'Admin/RT_Controller/insert';
+$route['a/rt/edit/(:any)']			= 'Admin/RT_Controller/edit/$1';
+$route['a/rt/update']				= 'Admin/RT_Controller/update';
+$route['a/rt/delete/(:any)']		= 'Admin/RT_Controller/delete/$1';
 
 $route['a/warga']					= 'Admin/Warga_Controller';
 $route['a/warga/add']				= 'Admin/Warga_Controller/add';
@@ -86,7 +86,12 @@ $route['a/user']					= 'Admin/User_Controller';
 // ------------------------------------------------------------------------
 // Jurnalis
 // ------------------------------------------------------------------------
-$route['j/dashboard']			= 'Jurnalis/Dashboard_Controller';
+$route['j/dashboard']				= 'Jurnalis/Dashboard_Controller';
+
+$route['j/berita']					= 'Jurnalis/Berita_Controller';
+$route['j/berita/add']				= 'Jurnalis/Berita_Controller/add';
+$route['j/berita/insert']			= 'Jurnalis/Berita_Controller/insert';
+$route['j/berita/delete/(:any)']	= 'Jurnalis/Berita_Controller/delete/$1';
 
 
 // ------------------------------------------------------------------------

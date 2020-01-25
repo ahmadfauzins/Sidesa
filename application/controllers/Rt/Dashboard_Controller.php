@@ -33,8 +33,6 @@ class Dashboard_Controller extends CI_Controller
 			$data['rt'] = $this->db->get_where('rt', ['id' => $this->session->userdata('id')])->row_array();
 			$this->load->view('layout/backend/header');
 			$this->load->view('layout/backend/topbar',$data);
-			$this->load->view('layout/backend/header');
-			$this->load->view('layout/backend/topbar');
 			$this->load->view('layout/backend/sidebar');
 			$this->load->view('pages/rt/dashboard');
 			$this->load->view('layout/backend/footer');

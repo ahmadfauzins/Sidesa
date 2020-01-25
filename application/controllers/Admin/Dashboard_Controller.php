@@ -31,8 +31,6 @@ class Dashboard_Controller extends CI_Controller
 			$data['admin'] = $this->db->get_where('auth', ['id' => $this->session->userdata('id')])->row_array();
 			$this->load->view('layout/backend/header');
 			$this->load->view('layout/backend/topbar', $data);
-			$this->load->view('layout/backend/header');
-			$this->load->view('layout/backend/topbar');
 			$this->load->view('layout/backend/sidebar');
 			$this->load->view('pages/admin/dashboard');
 			$this->load->view('layout/backend/footer');
