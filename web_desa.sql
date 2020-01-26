@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 25 Jan 2020 pada 14.15
+-- Waktu pembuatan: 26 Jan 2020 pada 18.56
 -- Versi server: 10.4.11-MariaDB
 -- Versi PHP: 7.4.1
 
@@ -34,7 +34,7 @@ CREATE TABLE `artikel` (
   `title` varchar(100) NOT NULL,
   `slug` varchar(100) NOT NULL,
   `type` varchar(50) NOT NULL,
-  `img` varchar(100) NOT NULL DEFAULT 'default.png',
+  `image` varchar(100) NOT NULL DEFAULT 'default.png',
   `body` text NOT NULL,
   `status` tinyint(1) NOT NULL DEFAULT 0,
   `is_approved` tinyint(1) NOT NULL DEFAULT 0,
@@ -45,9 +45,8 @@ CREATE TABLE `artikel` (
 -- Dumping data untuk tabel `artikel`
 --
 
-INSERT INTO `artikel` (`id`, `user_id`, `title`, `slug`, `type`, `img`, `body`, `status`, `is_approved`, `date`) VALUES
-(8, 20, 'Lorem Ipsum', 'lorem-ipsum', 'Pendidikan', 'Untitled.png', '<h2 style=\"margin-right: 0px; margin-bottom: 10px; margin-left: 0px; padding: 0px; font-weight: 400; line-height: 24px; font-family: DauphinPlain; font-size: 24px;\">What is Lorem Ipsum?</h2><p style=\"margin-right: 0px; margin-bottom: 15px; margin-left: 0px; padding: 0px; text-align: justify; font-family: &quot;Open Sans&quot;, Arial, sans-serif;\"><strong style=\"margin: 0px; padding: 0px;\">Lorem Ipsum</strong>&nbsp;is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>', 0, 0, '2020-01-25 12:20:01'),
-(9, 22, 'Coba cba', 'coba-cba', 'Ekonomi', 'ss.png', '<h2 style=\"margin-right: 0px; margin-bottom: 10px; margin-left: 0px; padding: 0px; font-weight: 400; line-height: 24px; font-family: DauphinPlain; font-size: 24px;\">What is Lorem Ipsum?</h2><p style=\"margin-right: 0px; margin-bottom: 15px; margin-left: 0px; padding: 0px; text-align: justify; font-family: &quot;Open Sans&quot;, Arial, sans-serif;\"><strong style=\"margin: 0px; padding: 0px;\">Lorem Ipsum</strong>&nbsp;is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>', 0, 0, '2020-01-25 12:58:13');
+INSERT INTO `artikel` (`id`, `user_id`, `title`, `slug`, `type`, `image`, `body`, `status`, `is_approved`, `date`) VALUES
+(12, 22, 'Lorem Ipsum', 'lorem-ipsum', 'Pendidikan', 'download.jpg', '<div style=\"margin: 0px 14.4px 0px 28.8px; padding: 0px; width: 436.8px; float: left; font-family: &quot;Open Sans&quot;, Arial, sans-serif;\"><h2 style=\"margin-right: 0px; margin-bottom: 10px; margin-left: 0px; padding: 0px; font-weight: 400; line-height: 24px; font-family: DauphinPlain; font-size: 24px;\">What is Lorem Ipsum?</h2><p style=\"margin-right: 0px; margin-bottom: 15px; margin-left: 0px; padding: 0px; text-align: justify;\"><strong style=\"margin: 0px; padding: 0px;\">Lorem Ipsum</strong>&nbsp;is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p></div><div style=\"margin: 0px 28.8px 0px 14.4px; padding: 0px; width: 436.8px; float: right; font-family: &quot;Open Sans&quot;, Arial, sans-serif;\"><h2 style=\"margin-right: 0px; margin-bottom: 10px; margin-left: 0px; padding: 0px; font-weight: 400; line-height: 24px; font-family: DauphinPlain; font-size: 24px;\">Why do we use it?</h2><p style=\"margin-right: 0px; margin-bottom: 15px; margin-left: 0px; padding: 0px; text-align: justify;\">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using \'Content here, content here\', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for \'lorem ipsum\' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p></div><p><br style=\"margin: 0px; padding: 0px; clear: both; font-family: &quot;Open Sans&quot;, Arial, sans-serif; text-align: center;\"></p><div style=\"margin: 0px 14.4px 0px 28.8px; padding: 0px; width: 436.8px; float: left; font-family: &quot;Open Sans&quot;, Arial, sans-serif;\"><h2 style=\"margin-right: 0px; margin-bottom: 10px; margin-left: 0px; padding: 0px; font-weight: 400; line-height: 24px; font-family: DauphinPlain; font-size: 24px;\">Where does it come from?</h2><p style=\"margin-right: 0px; margin-bottom: 15px; margin-left: 0px; padding: 0px; text-align: justify;\">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, \"Lorem ipsum dolor sit amet..\", comes from a line in section 1.10.32.</p><p style=\"margin-right: 0px; margin-bottom: 15px; margin-left: 0px; padding: 0px; text-align: justify;\">The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from \"de Finibus Bonorum et Malorum\" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p></div><div style=\"margin: 0px 28.8px 0px 14.4px; padding: 0px; width: 436.8px; float: right; font-family: &quot;Open Sans&quot;, Arial, sans-serif;\"><h2 style=\"margin-right: 0px; margin-bottom: 10px; margin-left: 0px; padding: 0px; font-weight: 400; line-height: 24px; font-family: DauphinPlain; font-size: 24px;\">Where can I get some?</h2><p style=\"margin-right: 0px; margin-bottom: 15px; margin-left: 0px; padding: 0px; text-align: justify;\">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don\'t look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn\'t anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</p></div>', 0, 0, '2020-01-26 05:27:18');
 
 -- --------------------------------------------------------
 
@@ -70,9 +69,23 @@ CREATE TABLE `auth` (
 
 INSERT INTO `auth` (`id`, `email`, `name`, `password`, `img`, `role`) VALUES
 (18, 'superadmin@karangsari.desa.id', 'Fauzi', '441c9d45e54ac3321c25f0e346cef5396ae6088f', 'default.png', 1),
-(19, 'admin@karangsari.desa.id', 'Ryan', 'af3dbfe86368370bdf2ec7456944df627c8865f5', 'default.png', 2),
+(19, 'admin@karangsari.desa.id', 'Ryan', 'af3dbfe86368370bdf2ec7456944df627c8865f5', 'download7.png', 2),
 (20, 'jurnalis@karangsari.desa.id', 'Ibnu Soffyan', 'ef5d5e12b7c277b6beb10df250c150cc1145c43c', 'download1.png', 3),
 (22, 'didin@gmail.com', 'Didin', '1d28cc17f60d3f92e02a83eeef330e4165859d04', 'download2.png', 3);
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `keuangan`
+--
+
+CREATE TABLE `keuangan` (
+  `id` int(11) NOT NULL,
+  `jenis_keuangan` char(1) NOT NULL,
+  `type` varchar(100) NOT NULL,
+  `jumlah` varchar(15) NOT NULL,
+  `date` date NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -122,6 +135,50 @@ INSERT INTO `rt` (`id`, `role`, `name`, `email`, `password`, `img`, `level`) VAL
 -- --------------------------------------------------------
 
 --
+-- Struktur dari tabel `suara_warga`
+--
+
+CREATE TABLE `suara_warga` (
+  `id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `title` varchar(100) NOT NULL,
+  `slug` varchar(100) NOT NULL,
+  `image` varchar(100) NOT NULL,
+  `body` text NOT NULL,
+  `date` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `suara_warga`
+--
+
+INSERT INTO `suara_warga` (`id`, `user_id`, `title`, `slug`, `image`, `body`, `date`) VALUES
+(5, 3, 'Lorem Ipsum Ganti', 'lorem-ipsum-ganti', 'download.jpg', '<p>hdjfshfkjhksgsdg ganti</p>', '2020-01-26 08:05:12');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `surat`
+--
+
+CREATE TABLE `surat` (
+  `id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `type` varchar(100) NOT NULL,
+  `message` text NOT NULL,
+  `date` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `surat`
+--
+
+INSERT INTO `surat` (`id`, `user_id`, `type`, `message`, `date`) VALUES
+(3, 3, 'Surat Keterangan Harga Tanah', '<p>Mohon Dibuatkan pak prosesnya</p>', '2020-01-26 17:15:40');
+
+-- --------------------------------------------------------
+
+--
 -- Struktur dari tabel `user`
 --
 
@@ -131,15 +188,15 @@ CREATE TABLE `user` (
   `id_warga` int(11) NOT NULL,
   `nik` varchar(20) NOT NULL,
   `password` varchar(50) NOT NULL,
-  `img` varchar(50) NOT NULL DEFAULT 'default.png'
+  `foto` varchar(50) NOT NULL DEFAULT 'default.png'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data untuk tabel `user`
 --
 
-INSERT INTO `user` (`id`, `role`, `id_warga`, `nik`, `password`, `img`) VALUES
-(3, 5, 11, '3210171604980021', 'df77b837b21302aa136fcc53dd7d4392d72b8bf5', 'default.png'),
+INSERT INTO `user` (`id`, `role`, `id_warga`, `nik`, `password`, `foto`) VALUES
+(3, 5, 11, '3210171604980021', 'df77b837b21302aa136fcc53dd7d4392d72b8bf5', 'download.png'),
 (4, 5, 12, '321017160', '9ec5672a6813a655e77fd61f2266b4c34a28ea01', 'default.png'),
 (10, 5, 18, '897996', '808ba88b366c6f889722d46ec2e209d1594ee7d6', 'default.png');
 
@@ -194,6 +251,12 @@ ALTER TABLE `auth`
   ADD UNIQUE KEY `email` (`email`);
 
 --
+-- Indeks untuk tabel `keuangan`
+--
+ALTER TABLE `keuangan`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indeks untuk tabel `rekomendasi`
 --
 ALTER TABLE `rekomendasi`
@@ -206,6 +269,20 @@ ALTER TABLE `rekomendasi`
 ALTER TABLE `rt`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `email` (`email`);
+
+--
+-- Indeks untuk tabel `suara_warga`
+--
+ALTER TABLE `suara_warga`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `user_id` (`user_id`);
+
+--
+-- Indeks untuk tabel `surat`
+--
+ALTER TABLE `surat`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `user_id` (`user_id`);
 
 --
 -- Indeks untuk tabel `user`
@@ -228,13 +305,19 @@ ALTER TABLE `warga`
 -- AUTO_INCREMENT untuk tabel `artikel`
 --
 ALTER TABLE `artikel`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT untuk tabel `auth`
 --
 ALTER TABLE `auth`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+
+--
+-- AUTO_INCREMENT untuk tabel `keuangan`
+--
+ALTER TABLE `keuangan`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT untuk tabel `rekomendasi`
@@ -247,6 +330,18 @@ ALTER TABLE `rekomendasi`
 --
 ALTER TABLE `rt`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
+-- AUTO_INCREMENT untuk tabel `suara_warga`
+--
+ALTER TABLE `suara_warga`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT untuk tabel `surat`
+--
+ALTER TABLE `surat`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT untuk tabel `user`
@@ -275,6 +370,18 @@ ALTER TABLE `artikel`
 --
 ALTER TABLE `rekomendasi`
   ADD CONSTRAINT `rekomendasi_ibfk_1` FOREIGN KEY (`id_warga`) REFERENCES `warga` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Ketidakleluasaan untuk tabel `suara_warga`
+--
+ALTER TABLE `suara_warga`
+  ADD CONSTRAINT `suara_warga_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`);
+
+--
+-- Ketidakleluasaan untuk tabel `surat`
+--
+ALTER TABLE `surat`
+  ADD CONSTRAINT `surat_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`);
 
 --
 -- Ketidakleluasaan untuk tabel `user`
