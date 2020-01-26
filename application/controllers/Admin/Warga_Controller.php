@@ -86,7 +86,7 @@ class Warga_Controller extends CI_Controller
 		$user_data['role']    				= 5;
 		$user_data['nik']    				= $this->input->post('nik');
 		$user_data['password']        		= sha1($this->input->post("nik"));
-		$user_data['img']    				= 'default.png';
+		$user_data['foto']    				= 'default.png';
 
 		if ($warga_data['img'] ='') {}else{
 			$config['upload_path']		= './assets/backend/img/foto_warga';

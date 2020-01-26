@@ -28,9 +28,10 @@ class Dashboard_Controller extends CI_Controller
   	public function index()
  	{
 		if ($this->session->userdata('role') === '5') {
-			$data['warga'] = $this->db->get_where('auth', ['id' => $this->session->userdata('id')])->row_array();
+			$id = $this->session->userdata('id');
+			$x['warga']	 		= $this->db->query("SELECT * FROM user INNER JOIN warga ON user.id_warga=warga.id WHERE user.id='$id'")->row_array();
 			$this->load->view('layout/backend/header');
-			$this->load->view('layout/backend/topbar', $data);
+			$this->load->view('layout/backend/topbar', $x);
 			$this->load->view('layout/backend/sidebar');
 			$this->load->view('pages/warga/dashboard');
 			$this->load->view('layout/backend/footer');

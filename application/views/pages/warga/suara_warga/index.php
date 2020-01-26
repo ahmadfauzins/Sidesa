@@ -16,7 +16,6 @@
 										<th>#</th>
 										<th>Judul</th>
 										<th>Isi Suara Warga</th>
-										<th>Foto</th>
 										<th>Tanggal</th>
 										<th>Action</th>
 									</tr>
@@ -28,13 +27,13 @@
 										<td><?= $data->title?></td>
 										<td>
 											<?php
-												$body = word_limiter($data->body, 35);
+												$body = word_limiter($data->body, 20);
 												echo $body;
 											?>
 										</td>
-										<td><img src="<?= base_url('assets/backend/img/artikel/').$data->image?>" alt="" width="50px"></td>
 										<td><?= $data->date?></td>
 										<td>
+											<a href="<?php echo base_url('w/suara-warga/edit/').$data->id ?>" title="Edit" class="btn btn-success"><i class="fas fa-edit" aria-hidden="true"></i></a>
 											<a href="<?php echo base_url('w/suara-warga/delete/').$data->id ?>" title="Hapus" class="btn btn-danger" onclick="javascript: return confirm('Anda yakin hapus ?')"><i class="fas fa-trash" aria-hidden="true"></i></a>
 										</td>
 									</tr>

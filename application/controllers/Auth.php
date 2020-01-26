@@ -208,6 +208,18 @@ class Auth extends CI_Controller
 		$this->session->sess_destroy();
 		redirect('auth');
 	}
+
+	public function logout_rt()
+	{
+		$this->session->sess_destroy();
+		redirect('auth/rt');
+	}
+	
+	public function logout_warga()
+	{
+		$this->session->sess_destroy();
+		redirect('login');
+	}
 }
 
 

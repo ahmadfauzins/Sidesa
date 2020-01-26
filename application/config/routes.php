@@ -154,6 +154,9 @@ $route['w/dashboard']					= 'Warga/Dashboard_Controller';
 $route['w/suara-warga']					= 'Warga/SuaraWarga_Controller';
 $route['w/suara-warga/add']				= 'Warga/SuaraWarga_Controller/add';
 $route['w/suara-warga/insert']			= 'Warga/SuaraWarga_Controller/insert';
+$route['w/suara-warga/edit/(:any)']		= 'Warga/SuaraWarga_Controller/edit/$1';
+$route['w/suara-warga/update']			= 'Warga/SuaraWarga_Controller/update';
+
 $route['w/suara-warga/delete/(:any)']	= 'Warga/SuaraWarga_Controller/delete/$1';
 
 $route['w/profile/edit']				= 'Warga/Profile_Controller/edit';

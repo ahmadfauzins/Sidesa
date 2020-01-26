@@ -16,7 +16,7 @@
 						<?php } elseif ($this->session->userdata('role') === '4') { ?>
 							<img alt="image" src="<?= base_url('assets/backend/img/foto_rt/').$rt['img']?>" class="rounded-circle mr-1">
 						<?php } elseif ($this->session->userdata('role') === '5') { ?>
-							<img alt="image" src="<?= base_url('assets/backend/img/avatar/').$warga['img']?>" class="rounded-circle mr-1">
+							<img alt="image" src="<?= base_url('assets/backend/img/avatar/').$warga['foto']?>" class="rounded-circle mr-1">
 						<?php } ?>
 
 						<div class="d-sm-none d-lg-inline-block">
@@ -29,13 +29,31 @@
 							<?php } elseif ($this->session->userdata('role') === '4') { ?>
 								<?= $rt['name'] ?>
 							<?php } elseif ($this->session->userdata('role') === '5') { ?>
-								<?= $warga['id_warga'] ?>
+								<?= $warga['name'] ?>
 							<?php } ?>
 						</div>
 						<div class="dropdown-menu dropdown-menu-right">
-							<a href="<?= base_url('auth/logout')?>" class="dropdown-item has-icon text-danger" style="margin-top: -30px">
-								<i class="fas fa-sign-out-alt"></i> Logout
-							</a>
+							<?php if ($this->session->userdata('role') === '1') {  ?>	
+								<a href="<?= base_url('auth/logout')?>" class="dropdown-item has-icon text-danger" style="margin-top: -30px">
+									<i class="fas fa-sign-out-alt"></i> Logout
+								</a>
+							<?php } elseif ($this->session->userdata('role') === '2') { ?>
+								<a href="<?= base_url('auth/logout')?>" class="dropdown-item has-icon text-danger" style="margin-top: -30px">
+									<i class="fas fa-sign-out-alt"></i> Logout
+								</a>
+							<?php } elseif ($this->session->userdata('role') === '3') { ?>
+								<a href="<?= base_url('auth/logout')?>" class="dropdown-item has-icon text-danger" style="margin-top: -30px">
+									<i class="fas fa-sign-out-alt"></i> Logout
+								</a>
+							<?php } elseif ($this->session->userdata('role') === '4') { ?>
+								<a href="<?= base_url('auth_rt')?>" class="dropdown-item has-icon text-danger" style="margin-top: -30px">
+									<i class="fas fa-sign-out-alt"></i> Logout
+								</a>
+							<?php } elseif ($this->session->userdata('role') === '5') { ?>
+								<a href="<?= base_url('auth/logout_warga')?>" class="dropdown-item has-icon text-danger" style="margin-top: -30px">
+									<i class="fas fa-sign-out-alt"></i> Logout
+								</a>
+							<?php } ?>
 						</div>
 					</li>
 				</ul>

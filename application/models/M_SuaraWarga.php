@@ -22,20 +22,25 @@ class M_SuaraWarga extends CI_Model {
 		$this->db->from('user');
 		$query = $this->db->get();
 		return $query;
-    }
+	}
  	// ------------------------------------------------------------------------
 
   	// ------------------------------------------------------------------------
   	public function insert_data($data,$table)
     {
 		$this->db->insert($table,$data);
-    }
+	}
+	
+	public function update_data($table, $data, $where)
+    {
+        $this->db->update($table, $data, $where);
+	}
 	// ------------------------------------------------------------------------
 	  
 	public function check_img($id)
 	{
 		$this->db->select('*');
-		$this->db->from('user');
+		$this->db->from('suara_warga');
 		$this->db->where('id', $id);
 		$query = $this->db->get();
 
