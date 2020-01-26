@@ -57,15 +57,11 @@ class Surat_Controller extends CI_Controller
 	{
 		if ($this->session->userdata('role') === '5') {
 			$id = $this->session->userdata('id');
-			$data['surat']	 	= $this->db->query("SELECT * FROM warga 
-													INNER JOIN user ON warga.id=user.id_warga
-													INNER JOIN surat ON user.id=surat.user_id 
-													WHERE surat.user_id='$id'")->result();
 			$x['warga']	 		= $this->db->query("SELECT * FROM user INNER JOIN warga ON user.id_warga=warga.id WHERE user.id='$id'")->row_array();
 			$this->load->view('layout/backend/header');
 			$this->load->view('layout/backend/topbar', $x);
 			$this->load->view('layout/backend/sidebar');
-			$this->load->view('pages/warga/surat/add', $data);
+			$this->load->view('pages/warga/surat/add');
 			$this->load->view('layout/backend/footer');
 		} else {
 			echo "

@@ -75,6 +75,17 @@ $route['a/rt/edit/(:any)']				= 'Admin/RT_Controller/edit/$1';
 $route['a/rt/update']					= 'Admin/RT_Controller/update';
 $route['a/rt/delete/(:any)']			= 'Admin/RT_Controller/delete/$1';
 
+$route['a/surat']						= 'Admin/Surat_Controller';
+$route['a/suara-warga']					= 'Admin/SuaraWarga_Controller';
+
+$route['a/keuangan']					= 'Admin/Keuangan_Controller';
+$route['a/keuangan/add']				= 'Admin/Keuangan_Controller/add';
+$route['a/keuangan/insert']				= 'Admin/Keuangan_Controller/insert';
+$route['a/keuangan/edit/(:any)']		= 'Admin/Keuangan_Controller/edit/$1';
+$route['a/keuangan/update']				= 'Admin/Keuangan_Controller/update';
+$route['a/keuangan/delete/(:any)']		= 'Admin/Keuangan_Controller/delete/$1';
+
+
 $route['a/warga']						= 'Admin/Warga_Controller';
 $route['a/warga/add']					= 'Admin/Warga_Controller/add';
 $route['a/warga/insert']				= 'Admin/Warga_Controller/insert';

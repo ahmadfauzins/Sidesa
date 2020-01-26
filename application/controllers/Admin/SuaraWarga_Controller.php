@@ -1,23 +1,27 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
+
 /**
  *
- * Controller Auth
+ * Controller SuaraWarga_Controller
  *
  * This controller for ...
  *
  * @package   CodeIgniter
  * @category  Controller CI
  * @author    Ryan Aprianto
- * @link      https://github.com/Ryan1604/
+ * @link      https://github.com/Ryan1604
+ * @param     ...
+ * @return    ...
  *
  */
 
-class Dashboard_Controller extends CI_Controller
+class SuaraWarga_Controller extends CI_Controller
 {
-	public function __construct()
-	{
+    
+  	public function __construct()
+ 	{
 		parent::__construct();
 		if ($this->session->userdata('logged_in' !== TRUE)) 
 		{
@@ -26,13 +30,17 @@ class Dashboard_Controller extends CI_Controller
   	}
 
   	public function index()
- 	{
+  	{
 		if ($this->session->userdata('role') === '2') {
-			$data['admin'] = $this->db->get_where('auth', ['id' => $this->session->userdata('id')])->row_array();
+			$id = $this->session->userdata('id');
+			$x['suara']	 	= $this->db->query("SELECT * FROM warga 
+													INNER JOIN user ON warga.id=user.id_warga
+													INNER JOIN suara_warga ON user.id=suara_warga.user_id ")->result();
+			$data['admin'] = $this->db->get_where('auth', ['id' => $id])->row_array();
 			$this->load->view('layout/backend/header');
 			$this->load->view('layout/backend/topbar', $data);
 			$this->load->view('layout/backend/sidebar');
-			$this->load->view('pages/admin/dashboard');
+			$this->load->view('pages/admin/suara-warga/index',$x);
 			$this->load->view('layout/backend/footer');
 		 } else {
 			echo "
@@ -42,9 +50,9 @@ class Dashboard_Controller extends CI_Controller
 				</script>
 			";	
 		}
-	}
+  	}
 }
 
 
-/* End of file Auth.php */
-/* Location: ./application/controllers/Auth.php */
+/* End of file SuaraWarga_Controller.php */
+/* Location: ./application/controllers/SuaraWarga_Controller.php */

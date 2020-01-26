@@ -90,7 +90,7 @@ $autoload['drivers'] = array();
 |
 |	$autoload['helper'] = array('url', 'file');
 */
-$autoload['helper'] = array('url','form','file','slug', 'text');
+$autoload['helper'] = array('url','form','file','slug', 'text', 'rupiah');
 
 /*
 | -------------------------------------------------------------------
@@ -134,4 +134,4 @@ $autoload['language'] = array();
 |	$autoload['model'] = array('first_model' => 'first');
 */
 
-$autoload['model'] = array('M_Auth','M_Rt', 'M_Warga', 'M_User',  'M_Rekomendasi', 'M_Artikel', 'M_Jurnalis', 'M_Admin', 'M_SuaraWarga','M_Surat');
+$autoload['model'] = array('M_Auth','M_Rt', 'M_Warga', 'M_User',  'M_Rekomendasi', 'M_Artikel', 'M_Jurnalis', 'M_Admin', 'M_SuaraWarga','M_Surat','M_Keuangan');

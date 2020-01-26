@@ -22,9 +22,9 @@
 				<li><a class="nav-link" href="<?= base_url('a/dashboard') ?>"><i class="fas fa-home"></i> <span>Dashboard</span></a></li>
 				
 				<li class="menu-header">Master Data</li>
-				<li><a class="nav-link" href="#"><i class="fas fa-envelope"></i> <span>Data Request Surat</span></a></li>
-				<li><a class="nav-link" href="#"><i class="fas fa-comment-dots"></i> <span>Data Suara Warga</span></a></li>
-				<li><a class="nav-link" href="#"><i class="fas fa-money-bill-wave"></i> <span>Data Keuangan</span></a></li>
+				<li><a class="nav-link" href="<?= base_url('a/surat')?>"><i class="fas fa-envelope"></i> <span>Data Request Surat</span></a></li>
+				<li><a class="nav-link" href="<?= base_url('a/suara-warga')?>"><i class="fas fa-comment-dots"></i> <span>Data Suara Warga</span></a></li>
+				<li><a class="nav-link" href="<?= base_url('a/keuangan')?>"><i class="fas fa-money-bill-wave"></i> <span>Data Keuangan</span></a></li>
 				<li><a class="nav-link" href="<?= base_url('a/berita')?>"><i class="fas fa-file-signature"></i> <span>Data Berita</span></a></li>
 				<li><a class="nav-link" href="<?= base_url('a/berita/pending')?>"><i class="fa fa-clock"></i> <span>Data Berita(Pending)</span></a></li>
 
