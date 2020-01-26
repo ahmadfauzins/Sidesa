@@ -15,6 +15,8 @@
 							<img alt="image" src="<?= base_url('assets/backend/img/avatar/').$jurnalis['img']?>" class="rounded-circle mr-1">
 						<?php } elseif ($this->session->userdata('role') === '4') { ?>
 							<img alt="image" src="<?= base_url('assets/backend/img/foto_rt/').$rt['img']?>" class="rounded-circle mr-1">
+						<?php } elseif ($this->session->userdata('role') === '5') { ?>
+							<img alt="image" src="<?= base_url('assets/backend/img/avatar/').$warga['img']?>" class="rounded-circle mr-1">
 						<?php } ?>
 
 						<div class="d-sm-none d-lg-inline-block">
@@ -26,6 +28,8 @@
 								<?= $jurnalis['name'] ?>
 							<?php } elseif ($this->session->userdata('role') === '4') { ?>
 								<?= $rt['name'] ?>
+							<?php } elseif ($this->session->userdata('role') === '5') { ?>
+								<?= $warga['id_warga'] ?>
 							<?php } ?>
 						</div>
 						<div class="dropdown-menu dropdown-menu-right">

@@ -27,13 +27,13 @@ class Profile_Controller extends CI_Controller
 
 	public function edit()
 	{
-		if ($this->session->userdata('role') === '4') {
-			$data['rt'] = $this->db->get_where('rt', ['id' => $this->session->userdata('id')])->row_array();
+		if ($this->session->userdata('role') === '2') {
+			$data['admin'] = $this->db->get_where('auth', ['id' => $this->session->userdata('id')])->row_array();
 			
 			$this->load->view('layout/backend/header');
 			$this->load->view('layout/backend/topbar', $data);
 			$this->load->view('layout/backend/sidebar');
-			$this->load->view('pages/rt/profile/edit', $data);
+			$this->load->view('pages/admin/profile/edit', $data);
 			$this->load->view('layout/backend/footer');
 		} else {
 			echo "
@@ -50,27 +50,28 @@ class Profile_Controller extends CI_Controller
 		$id					= $this->input->post('id');
 		$name				= $this->input->post('name');
 		$email           	= $this->input->post('email');
-		$result				= $this->M_Rt->check_img($id);
+		$result				= $this->M_Admin->check_img($id);
 		if($result->num_rows() > 0)
 		{
 			$data		= $result->row_array();
 			$password	= $data['password'];
 			$foto		= $data['img'];
-			$level		= $data['level'];
 		} 
 		
 		$img 				= $_FILES['foto'];
-		if ($img){
-			$config['upload_path']		= './assets/backend/img/foto_rt';
+		if ($img = '') {
+			$img = 'default.png';
+		} else {
+			$config['upload_path']		= './assets/backend/img/avatar';
 			$config['allowed_types']	= 'jpg|png|jpeg';
 			$config['max_size']			= 2048;
 			$this->load->library('upload',$config);
 			if($this->upload->do_upload('foto')){
 				$img=$this->upload->data('file_name');
 				$this->db->set('img', $img);
-				if($foto != NULL)
+				if($foto != 'default.png')
 				{
-					$target_file	= './assets/backend/img/foto_rt/'.$foto;
+					$target_file	= './assets/backend/img/avatar/'.$foto;
 					unlink($target_file);
 				}
 			} else {
@@ -79,23 +80,22 @@ class Profile_Controller extends CI_Controller
 		}
 	   
 		$data = array(
-			'role'			=> 4,
 			'email'			=> $email,
 			'name'			=> $name,
 			'password'		=> $password,
 			'img'			=> $img,
-			'level'         => $level
+			'role'          => '2'
 		);
 		
 		$where = array('id' => $id);
-		$this->M_Rt->update_data('rt', $data, $where);
-		redirect('rt/dashboard');     
+		$this->M_Admin->update_data('auth', $data, $where);
+		redirect('a/profile/edit');     
 	}
 
 	public function changepassword()
 	{
-		if ($this->session->userdata('role') === '4') {
-			$data['rt'] = $this->db->get_where('rt', ['id' => $this->session->userdata('id')])->row_array();
+		if ($this->session->userdata('role') === '2') {
+			$data['admin'] = $this->db->get_where('auth', ['id' => $this->session->userdata('id')])->row_array();
 			
 			$this->form_validation->set_rules('lama', 'Current Password', 'trim|required');
 			$this->form_validation->set_rules('baru', 'New Password', 'trim|required|min_length[3]|matches[konfirmasi]');
@@ -106,29 +106,29 @@ class Profile_Controller extends CI_Controller
 				$this->load->view('layout/backend/header');
 				$this->load->view('layout/backend/topbar', $data);
 				$this->load->view('layout/backend/sidebar');
-				$this->load->view('pages/rt/profile/changepassword', $data);
+				$this->load->view('pages/admin/profile/changepassword', $data);
 				$this->load->view('layout/backend/footer');
 			} else {
 				$lama		= $this->input->post('lama');
 				$baru		= $this->input->post('baru');
 				$lama_hash 	= sha1($lama);
-				if ($lama_hash == $data['rt']['password']) {
+				if ($lama_hash == $data['admin']['password']) {
 					if ($lama == $baru) {
 						$this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">New Password cannot be the same!</div>');
-						redirect('rt/profile/changepassword');
+						redirect('a/profile/changepassword');
 					} else {
 						$password_hash = sha1($baru);
 
 						$this->db->set('password', $password_hash);
 						$this->db->where('id', $this->session->userdata('id'));
-						$this->db->update('rt');
+						$this->db->update('auth');
 
 						$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Password Changed</div>');
-						redirect('rt/profile/changepassword');
+						redirect('a/profile/changepassword');
 					}
 				} else {
 					$this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Wrong Current Password!</div>');
-					redirect('rt/profile/changepassword');
+					redirect('a/profile/changepassword');
 				}
 			}
 		} else {

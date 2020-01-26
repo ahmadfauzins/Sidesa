@@ -75,7 +75,7 @@ class Profile_Controller extends CI_Controller
 					unlink($target_file);
 				}
 			} else {
-				$img = 'default.png';
+				$img = $foto;
 			}
 		}
 	   

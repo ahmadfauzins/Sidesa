@@ -41,6 +41,17 @@ class M_Auth extends CI_Model {
 		return $query;
   	}
 	// ------------------------------------------------------------------------
+
+	public function check_warga($nik, $password)
+	{
+		$this->db->select('*');
+		$this->db->from('user');
+		$this->db->where('nik', $nik);
+		$this->db->where('password', sha1($password));
+		$query = $this->db->get();
+
+		return $query;
+  	}
 }
 
 /* End of file M_Auth_model.php */

@@ -59,6 +59,17 @@ class Auth extends CI_Controller
 		}
 	}
 
+	public function warga()
+ 	{
+		if ($this->session->userdata('role') === '5') {
+			redirect('w/dashboard');
+		} else {
+			$this->load->view('layout/backend/auth/header');
+	 	 	$this->load->view('auth/login_warga');
+			$this->load->view('layout/backend/auth/footer');
+		}
+	}
+
 	public function login()	
 	{
 		$email 		= $this->input->post('email', TRUE);
@@ -139,6 +150,45 @@ class Auth extends CI_Controller
 			} elseif ($role === '4') {
 				redirect('rt/dashboard');
 			}
+		} else {
+			echo "
+				<script>
+					alert('Access Denied');
+					history.go(-1);
+				</script>
+			";		
+		}
+		$this->load->view('layout/backend/auth/header');
+	  	$this->load->view('auth/login_rt');
+	  	$this->load->view('auth/login');
+		$this->load->view('layout/backend/auth/footer');
+	}
+
+	public function login_warga()	
+	{
+		$nik 		= $this->input->post('nik', TRUE);
+		$password	= $this->input->post('password', TRUE);
+		$result		= $this->M_Auth->check_warga($nik, $password);
+		if($result->num_rows() > 0)
+		{
+			$data		= $result->row_array();
+			$id			= $data['id'];
+			$role		= $data['role'];
+			$id_warga	= $data['id_warga'];
+			$nik		= $data['nik'];
+			$password	= $data['password'];
+			$img		= $data['img'];
+			$sesdata	= array(
+				'id'		=> $id,
+				'role'		=> $role,
+				'id_warga'	=> $id_warga,
+				'nik'		=> $nik,
+				'password'	=> $password,
+				'img'		=> $img,
+				'logged_in'	=> TRUE
+			);
+			$this->session->set_userdata($sesdata);
+			redirect('w/dashboard');
 		} else {
 			echo "
 				<script>

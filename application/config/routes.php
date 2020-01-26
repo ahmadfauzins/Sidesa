@@ -52,6 +52,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'welcome';
 $route['auth'] = 'Auth';
 $route['auth_rt'] = 'Auth/rt';
+$route['login'] = 'Auth/warga';
 
 //  @author    Ryan Aprianto
 // ------------------------------------------------------------------------
@@ -96,6 +97,11 @@ $route['a/berita/edit/(:any)']			= 'Admin/Berita_Controller/edit/$1';
 $route['a/berita/update']				= 'Admin/Berita_Controller/update';
 $route['a/berita/delete/(:any)']		= 'Admin/Berita_Controller/delete/$1';
 
+$route['a/profile/edit']				= 'Admin/Profile_Controller/edit';
+$route['a/profile/update']				= 'Admin/Profile_Controller/update';
+$route['a/profile/changepassword']		= 'Admin/Profile_Controller/changepassword';
+
+
 $route['a/user']						= 'Admin/User_Controller';
 
 // ------------------------------------------------------------------------
@@ -139,6 +145,20 @@ $route['rt/warga/insert']				= 'Rt/Warga_Controller/insert';
 $route['rt/warga/edit/(:any)']			= 'Rt/Warga_Controller/edit/$1';
 $route['rt/warga/update']				= 'Rt/Warga_Controller/update';
 $route['rt/warga/delete/(:any)']		= 'Rt/Warga_Controller/delete/$1';
+
+// ------------------------------------------------------------------------
+// Warga
+// ------------------------------------------------------------------------
+$route['w/dashboard']					= 'Warga/Dashboard_Controller';
+
+$route['w/suara-warga']					= 'Warga/SuaraWarga_Controller';
+$route['w/suara-warga/add']				= 'Warga/SuaraWarga_Controller/add';
+$route['w/suara-warga/insert']			= 'Warga/SuaraWarga_Controller/insert';
+$route['w/suara-warga/delete/(:any)']	= 'Warga/SuaraWarga_Controller/delete/$1';
+
+$route['w/profile/edit']				= 'Warga/Profile_Controller/edit';
+$route['w/profile/update']				= 'Warga/Profile_Controller/update';
+$route['w/profile/changepassword']		= 'Warga/Profile_Controller/changepassword';
 
 
 $route['404_override'] = '';
