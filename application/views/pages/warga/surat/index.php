@@ -5,7 +5,7 @@
 			<h1>Data Request Surat</h1>
 		</div>
 		<div class="section-body">
-			<a href="<?= base_url('w/surat/add') ?>" class="btn btn-primary"><i class="fa fa-plus" aria-hidden="true"></i> Tambah Data</a><br><br>
+			<a href="<?= base_url('w/surat/add') ?>" class="btn btn-primary"><i class="fa fa-plus" aria-hidden="true"></i> Request Surat</a><br><br>
 			<div class="row">
 				<div class="col-12">
 					<div class="card">

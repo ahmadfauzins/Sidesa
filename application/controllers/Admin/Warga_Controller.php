@@ -160,7 +160,7 @@ class Warga_Controller extends CI_Controller
 			if($this->upload->do_upload('foto')){
 				$img=$this->upload->data('file_name');
 				$this->db->set('img', $img);
-				if($foto != NULL)
+				if($foto != 'default.png')
 				{
 					$target_file	= './assets/backend/img/foto_warga/'.$foto;
 					unlink($target_file);

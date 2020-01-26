@@ -75,7 +75,7 @@
 				<li class="menu-header">Setting</li>
 				<li><a class="nav-link" href="<?= base_url('rt/profile/edit') ?>"><i class="fas fa-user-edit"></i> <span>Edit Profil</span></a></li>
 				<li><a class="nav-link" href="<?= base_url('rt/profile/changepassword') ?>"><i class="fas fa-lock"></i> <span>Ubah Password</span></a></li>
-				<li><a class="nav-link" href="<?= base_url('auth/logout')?>"><i class="fas fa-sign-out-alt"></i> <span>Logout</span></a></li>
+				<li><a class="nav-link" href="<?= base_url('auth/logout_rt')?>"><i class="fas fa-sign-out-alt"></i> <span>Logout</span></a></li>
 			</ul>
 		<?php } elseif ($this->session->userdata('role') === '5') { ?>
 			<ul class="sidebar-menu">
@@ -89,7 +89,7 @@
 				<li class="menu-header">Setting</li>
 				<li><a class="nav-link" href="<?= base_url('w/profile/edit') ?>"><i class="fas fa-user-edit"></i> <span>Edit Profil</span></a></li>
 				<li><a class="nav-link" href="<?= base_url('w/profile/changepassword') ?>"><i class="fas fa-lock"></i> <span>Ubah Password</span></a></li>
-				<li><a class="nav-link" href="<?= base_url('auth/logout')?>"><i class="fas fa-sign-out-alt"></i> <span>Logout</span></a></li>
+				<li><a class="nav-link" href="<?= base_url('auth/logout_warga')?>"><i class="fas fa-sign-out-alt"></i> <span>Logout</span></a></li>
 			</ul>
 		<?php } ?>
 	</aside>

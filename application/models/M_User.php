@@ -24,7 +24,22 @@ class M_User extends CI_Model {
 		}
 		$query = $this->db->get();
 		return $query;
-    }
+	}
+	
+	public function update_data($table, $data, $where)
+    {
+        $this->db->update($table, $data, $where);
+	}
+	
+	public function check_img($id)
+	{
+		$this->db->select('*');
+		$this->db->from('user');
+		$this->db->where('id', $id);
+		$query = $this->db->get();
+
+		return $query;
+	}
  	
 }
 

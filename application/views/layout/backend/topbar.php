@@ -16,7 +16,7 @@
 						<?php } elseif ($this->session->userdata('role') === '4') { ?>
 							<img alt="image" src="<?= base_url('assets/backend/img/foto_rt/').$rt['img']?>" class="rounded-circle mr-1">
 						<?php } elseif ($this->session->userdata('role') === '5') { ?>
-							<img alt="image" src="<?= base_url('assets/backend/img/avatar/').$warga['foto']?>" class="rounded-circle mr-1">
+							<img alt="image" src="<?= base_url('assets/backend/img/foto_user/').$warga['foto']?>" class="rounded-circle mr-1">
 						<?php } ?>
 
 						<div class="d-sm-none d-lg-inline-block">
