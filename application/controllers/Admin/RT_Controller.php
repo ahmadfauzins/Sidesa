@@ -29,6 +29,8 @@ class RT_Controller extends CI_Controller
 	public function index()
 	{
 		if ($this->session->userdata('role') === '2') {
+			$this->load->helper('text');
+			
 			$data['rt'] = $this->M_Rt->get_data()->result();
 			$x['admin'] = $this->db->get_where('auth', ['id' => $this->session->userdata('id')])->row_array();
 			$this->load->view('layout/backend/header');

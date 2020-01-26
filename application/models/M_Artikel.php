@@ -44,7 +44,7 @@ class M_Artikel extends CI_Model {
     {
         $this->db->where($where);
         $this->db->delete($table);
-    }
+	}
 
 }
 

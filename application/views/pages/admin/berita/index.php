@@ -5,7 +5,6 @@
 			<h1>Data Berita</h1>
 		</div>
 		<div class="section-body">
-			<a href="<?= base_url('j/berita/add') ?>" class="btn btn-primary"><i class="fa fa-plus" aria-hidden="true"></i> Tambah Data</a><br><br>
 			<div class="row">
 				<div class="col-12">
 					<div class="card">
@@ -15,9 +14,6 @@
 									<tr>
 										<th>#</th>
 										<th>Judul</th>
-										<th>Isi Berita</th>
-										<th>Jenis Berita</th>
-										<th>Foto</th>
 										<th>Status</th>
 										<th>Persetujuan</th>
 										<th>Tanggal</th>
@@ -25,22 +21,14 @@
 									</tr>
 									<?php
 									$no=1;
-									foreach($jurnalis as $jurnal) : ?>
+									foreach($berita as $brt) : ?>
 									<tr>
 										<td><?= $no++?></td>
-										<td><?= $jurnal->title?></td>
+										<td><?= $brt->title?></td>
 										<td>
-											<?php
-												$body = word_limiter($jurnal->body, 35);
-												echo $body;
-											?>
-										</td>
-										<td><?= $jurnal->type?></td>
-										<td><img src="<?= base_url('assets/backend/img/artikel/').$jurnal->image?>" alt="" width="50px"></td>
-										<td>
-										<?php if ($jurnal->status === '0') { ?>
+										<?php if ($brt->status === '0') { ?>
 											<div class="badges">
-												<span class="badge badge-success">Pending</span>
+												<span class="badge badge-warning">Pending</span>
 											</div>
 										<?php } else { ?>
 											<div class="badges">
@@ -49,19 +37,16 @@
 										<?php } ?>	
 										</td>
 										<td>
-										<?php if ($jurnal->is_approved === '0') { ?>
-											<div class="badges">
-												<span class="badge badge-danger">Belum disetujui</span>
-											</div>
+										<?php if ($brt->is_approved === '0') { ?>
+											<a href="<?= base_url('a/berita/allow/').$brt->id ?>" class="btn btn-danger">Setujui</a>
 										<?php } else { ?>
-											<div class="badges">
-												<span class="badge badge-primary">Sudah disetujui</span>
-											</div>
+											<a href="<?= base_url('a/berita/allow/').$brt->id ?>" class="btn btn-success">Tidak Setujui</a>
 										<?php } ?>	
 										</td>
-										<td><?= $jurnal->date?></td>
+										<td><?= $brt->date?></td>
 										<td>
-											<a href="<?php echo base_url('j/berita/delete/').$jurnal->id ?>" title="Hapus" class="btn btn-danger" onclick="javascript: return confirm('Anda yakin hapus ?')"><i class="fas fa-trash" aria-hidden="true"></i></a>
+											<a href="<?= base_url('a/berita/detail/').$brt->id ?>" class="btn btn-info"><i class="fas fa-eye" aria-hidden="true"></i></a>
+											<a href="<?= base_url('a/berita/delete/').$brt->id ?>" title="Hapus" class="btn btn-danger" onclick="javascript: return confirm('Anda yakin hapus ?')"><i class="fas fa-trash" aria-hidden="true"></i></a>
 										</td>
 									</tr>
 									<?php endforeach;?>

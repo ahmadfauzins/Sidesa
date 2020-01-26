@@ -127,8 +127,7 @@ class Warga_Controller extends CI_Controller
 					history.go(-1);
 				</script>
 			";
-		}
-		
+		}	
 	}
 
 	public function update()

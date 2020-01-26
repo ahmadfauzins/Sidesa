@@ -88,6 +88,14 @@ $route['a/jurnalis/edit/(:any)']		= 'Admin/Jurnalis_Controller/edit/$1';
 $route['a/jurnalis/update']				= 'Admin/Jurnalis_Controller/update';
 $route['a/jurnalis/delete/(:any)']		= 'Admin/Jurnalis_Controller/delete/$1';
 
+$route['a/berita']						= 'Admin/Berita_Controller';
+$route['a/berita/pending']				= 'Admin/Berita_Controller/pending';
+$route['a/berita/allow/(:any)']			= 'Admin/Berita_Controller/allow/$1';
+$route['a/berita/detail/(:any)']		= 'Admin/Berita_Controller/detail/$1';
+$route['a/berita/edit/(:any)']			= 'Admin/Berita_Controller/edit/$1';
+$route['a/berita/update']				= 'Admin/Berita_Controller/update';
+$route['a/berita/delete/(:any)']		= 'Admin/Berita_Controller/delete/$1';
+
 $route['a/user']						= 'Admin/User_Controller';
 
 // ------------------------------------------------------------------------

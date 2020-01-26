@@ -29,6 +29,8 @@ class Berita_Controller extends CI_Controller
 	public function index()
 	{
 		if ($this->session->userdata('role') === '3') {
+			$this->load->helper('text');
+
 			$id = $this->session->userdata('id');
 			$data['jurnalis'] = $this->db->query("SELECT * FROM artikel WHERE user_id='$id'")->result();
 			$x['jurnalis'] = $this->db->get_where('auth', ['id' => $this->session->userdata('id')])->row_array();
@@ -91,7 +93,7 @@ class Berita_Controller extends CI_Controller
 			'title'			=> $title,
 			'slug'			=> $slug,
 			'type'			=> $type,
-			'img'			=> $img,
+			'image'			=> $img,
 			'body'			=> $body
 		);
 		
@@ -105,7 +107,7 @@ class Berita_Controller extends CI_Controller
 		if($result->num_rows() > 0)
 		{
 			$data	= $result->row_array();
-			$foto	= $data['img'];
+			$foto	= $data['image'];
 
 			if($foto != 'default.png')
 			{
