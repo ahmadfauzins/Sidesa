@@ -1,23 +1,27 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
+
 /**
  *
- * Controller Auth
+ * Controller Rekomendasi_Controller
  *
  * This controller for ...
  *
  * @package   CodeIgniter
  * @category  Controller CI
  * @author    Ryan Aprianto
- * @link      https://github.com/Ryan1604/
+ * @link      https://github.com/Ryan1604
+ * @param     ...
+ * @return    ...
  *
  */
 
-class Dashboard_Controller extends CI_Controller
+class Rekomendasi_Controller extends CI_Controller
 {
-	public function __construct()
-	{
+    
+  	public function __construct()
+  	{
 		parent::__construct();
 		if ($this->session->userdata('logged_in' !== TRUE)) 
 		{
@@ -26,13 +30,14 @@ class Dashboard_Controller extends CI_Controller
   	}
 
   	public function index()
- 	{
-		if ($this->session->userdata('role') === '1') {
+  	{
+    	if ($this->session->userdata('role') === '1') {
+			$data['rekomendasi'] = $this->db->query("SELECT * FROM warga INNER JOIN rekomendasi ON warga.id = rekomendasi.id_warga")->result();
 			$x['superadmin'] = $this->db->get_where('auth', ['id' => $this->session->userdata('id')])->row_array();
 			$this->load->view('layout/backend/header');
 			$this->load->view('layout/backend/topbar', $x);
 			$this->load->view('layout/backend/sidebar');
-			$this->load->view('pages/superadmin/dashboard');
+			$this->load->view('pages/superadmin/rekomendasi/index', $data);
 			$this->load->view('layout/backend/footer');
 		} else {
 			echo "
@@ -41,10 +46,11 @@ class Dashboard_Controller extends CI_Controller
 					history.go(-1);
 				</script>
 			";	
-		}
-	}
+		} 
+ 	}
+
 }
 
 
-/* End of file Auth.php */
-/* Location: ./application/controllers/Auth.php */
+/* End of file Rekomendasi_Controller.php */
+/* Location: ./application/controllers/Rekomendasi_Controller.php */

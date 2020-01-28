@@ -8,7 +8,7 @@
 				<ul class="navbar-nav navbar-right ml-auto mr-1">
 					<li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
 						<?php if ($this->session->userdata('role') === '1') {  ?>	
-							<img alt="image" src="<?= base_url('assets/backend/img/avatar/').$this->session->userdata('img')?>" class="rounded-circle mr-1">
+							<img alt="image" src="<?= base_url('assets/backend/img/avatar/').$superadmin['img']?>" class="rounded-circle mr-1">
 						<?php } elseif ($this->session->userdata('role') === '2') { ?>
 							<img alt="image" src="<?= base_url('assets/backend/img/avatar/').$admin['img']?>" class="rounded-circle mr-1">
 						<?php } elseif ($this->session->userdata('role') === '3') { ?>
@@ -21,7 +21,7 @@
 
 						<div class="d-sm-none d-lg-inline-block">
 							<?php if ($this->session->userdata('role') === '1') {  ?>	
-								<?= $this->session->userdata('name') ?>
+								<?= $superadmin['name'] ?>
 							<?php } elseif ($this->session->userdata('role') === '2') { ?>
 								<?= $admin['name'] ?>
 							<?php } elseif ($this->session->userdata('role') === '3') { ?>

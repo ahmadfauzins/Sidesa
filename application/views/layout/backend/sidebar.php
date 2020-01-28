@@ -14,8 +14,17 @@
 		<?php if ($this->session->userdata('role') === '1') {  ?>
 			<ul class="sidebar-menu">
 				<li class="menu-header">Dashboard</li>
-					<li><a class="nav-link" href="<?= base_url('sa/dashboard') ?>"><i class="fas fa-home"></i> <span>Dashboard</span></a>
-				</li>	
+				<li><a class="nav-link" href="<?= base_url('sa/dashboard') ?>"><i class="fas fa-home"></i> <span>Dashboard</span></a></li>
+
+				<li class="menu-header">Master Data</li>
+				<li><a class="nav-link" href="<?= base_url('sa/penduduk')?>"><i class="fas fa-users"></i> <span>Data Penduduk</span></a></li>
+				<li><a class="nav-link" href="<?= base_url('sa/rekomendasi') ?>"><i class="fas fa-user-check"></i> <span>Data Penduduk kurang mampu</span></a></li>
+				<li><a class="nav-link" href="<?= base_url('sa/keuangan')?>"><i class="fas fa-money-bill-wave"></i> <span>Data Keuangan</span></a></li>
+				
+				<li class="menu-header">Setting</li>
+				<li><a class="nav-link" href="<?= base_url('sa/profile/edit') ?>"><i class="fas fa-user-edit"></i> <span>Edit Profil</span></a></li>
+				<li><a class="nav-link" href="<?= base_url('sa/profile/changepassword') ?>"><i class="fas fa-lock"></i> <span>Ubah Password</span></a></li>
+				<li><a class="nav-link" href="<?= base_url('auth/logout')?>"><i class="fas fa-sign-out-alt"></i> <span>Logout</span></a></li>
 		<?php } elseif ($this->session->userdata('role') === '2') { ?>
 			<ul class="sidebar-menu">
 				<li class="menu-header">Dashboard</li>

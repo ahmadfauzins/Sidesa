@@ -21,19 +21,18 @@ class Profile_Controller extends CI_Controller
 		parent::__construct();
 		if ($this->session->userdata('logged_in' !== TRUE)) 
 		{
-			redirect('login');	
+			redirect('auth');	
 		}
   	}
 
 	public function edit()
 	{
-		if ($this->session->userdata('role') === '5') {
-			$id = $this->session->userdata('id');
-			$data['warga']	 		= $this->db->query("SELECT * FROM user INNER JOIN warga ON user.id_warga=warga.id WHERE user.id='$id'")->row_array();
+		if ($this->session->userdata('role') === '1') {
+			$data['superadmin'] = $this->db->get_where('auth', ['id' => $this->session->userdata('id')])->row_array();	
 			$this->load->view('layout/backend/header');
 			$this->load->view('layout/backend/topbar', $data);
 			$this->load->view('layout/backend/sidebar');
-			$this->load->view('pages/warga/profile/edit', $data);
+			$this->load->view('pages/superadmin/profile/edit', $data);
 			$this->load->view('layout/backend/footer');
 		} else {
 			echo "
@@ -44,32 +43,34 @@ class Profile_Controller extends CI_Controller
 			";
 		}
 	}
-	
+
 	public function update()
 	{
 		$id					= $this->input->post('id');
-		$nik 	          	= $this->input->post('nik');
-		$result				= $this->M_User->check_img($id);
+		$name				= $this->input->post('name');
+		$email           	= $this->input->post('email');
+		$result				= $this->M_Admin->check_img($id);
 		if($result->num_rows() > 0)
 		{
 			$data		= $result->row_array();
 			$password	= $data['password'];
-			$foto		= $data['foto'];
-		}
-
+			$foto		= $data['img'];
+		} 
+		
 		$img 				= $_FILES['foto'];
-		if ($img){
-			$config['upload_path']		= './assets/backend/img/foto_user';
+		if ($img = '') {
+			$img = 'default.png';
+		} else {
+			$config['upload_path']		= './assets/backend/img/avatar';
 			$config['allowed_types']	= 'jpg|png|jpeg';
 			$config['max_size']			= 2048;
-
 			$this->load->library('upload',$config);
 			if($this->upload->do_upload('foto')){
 				$img=$this->upload->data('file_name');
-				$this->db->set('foto', $img);
+				$this->db->set('img', $img);
 				if($foto != 'default.png')
 				{
-					$target_file	= './assets/backend/img/foto_user/'.$foto;
+					$target_file	= './assets/backend/img/avatar/'.$foto;
 					unlink($target_file);
 				}
 			} else {
@@ -78,24 +79,23 @@ class Profile_Controller extends CI_Controller
 		}
 	   
 		$data = array(
-			'role'			=> 5,
-			'id_warga'		=> $this->session->userdata('id_warga'),
-			'nik'			=> $nik,
+			'email'			=> $email,
+			'name'			=> $name,
 			'password'		=> $password,
-			'foto'			=> $img
+			'img'			=> $img,
+			'role'          => '2'
 		);
 		
-		$where = array('id' => $this->session->userdata('id'));
-		$this->M_User->update_data('user', $data, $where);
-		redirect('w/profile/edit');     
+		$where = array('id' => $id);
+		$this->M_Admin->update_data('auth', $data, $where);
+		redirect('sa/profile/edit');     
 	}
 
 	public function changepassword()
 	{
-		if ($this->session->userdata('role') === '5') {
-			$id = $this->session->userdata('id');
-			$data['warga']	 		= $this->db->query("SELECT * FROM user INNER JOIN warga ON user.id_warga=warga.id WHERE user.id='$id'")->row_array();
-
+		if ($this->session->userdata('role') === '1') {
+			$data['superadmin'] = $this->db->get_where('auth', ['id' => $this->session->userdata('id')])->row_array();
+			
 			$this->form_validation->set_rules('lama', 'Current Password', 'trim|required');
 			$this->form_validation->set_rules('baru', 'New Password', 'trim|required|min_length[3]|matches[konfirmasi]');
 			$this->form_validation->set_rules('konfirmasi', 'Confirm New Password', 'trim|required|min_length[3]|matches[baru]');
@@ -105,29 +105,29 @@ class Profile_Controller extends CI_Controller
 				$this->load->view('layout/backend/header');
 				$this->load->view('layout/backend/topbar', $data);
 				$this->load->view('layout/backend/sidebar');
-				$this->load->view('pages/warga/profile/changepassword', $data);
+				$this->load->view('pages/superadmin/profile/changepassword', $data);
 				$this->load->view('layout/backend/footer');
 			} else {
 				$lama		= $this->input->post('lama');
 				$baru		= $this->input->post('baru');
 				$lama_hash 	= sha1($lama);
-				if ($lama_hash == $data['warga']['password']) {
+				if ($lama_hash == $data['superadmin']['password']) {
 					if ($lama == $baru) {
 						$this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">New Password cannot be the same!</div>');
-						redirect('w/profile/changepassword');
+						redirect('sa/profile/changepassword');
 					} else {
 						$password_hash = sha1($baru);
 
 						$this->db->set('password', $password_hash);
 						$this->db->where('id', $this->session->userdata('id'));
-						$this->db->update('user');
+						$this->db->update('auth');
 
 						$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Password Changed</div>');
-						redirect('w/profile/changepassword');
+						redirect('sa/profile/changepassword');
 					}
 				} else {
 					$this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Wrong Current Password!</div>');
-					redirect('w/profile/changepassword');
+					redirect('sa/profile/changepassword');
 				}
 			}
 		} else {

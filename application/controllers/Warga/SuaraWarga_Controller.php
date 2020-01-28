@@ -10,9 +10,8 @@ defined('BASEPATH') or exit('No direct script access allowed');
  *
  * @package   CodeIgniter
  * @category  Controller CI
- * @author    Setiawan Jodi <jodisetiawan@fisip-untirta.ac.id>
- * @author    Raul Guerrero <r.g.c@me.com>
- * @link      https://github.com/setdjod/myci-extension/
+ * @author    Ryan Aprianto
+ * @link      https://github.com/Ryan1604
  * @param     ...
  * @return    ...
  *
@@ -26,7 +25,7 @@ class SuaraWarga_Controller extends CI_Controller
 		parent::__construct();
 		if ($this->session->userdata('logged_in' !== TRUE)) 
 		{
-			redirect('auth');	
+			redirect('login');	
 		}
  	}
 

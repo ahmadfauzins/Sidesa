@@ -12,7 +12,7 @@
 								</div>
 								<div class="card-wrap">
 									<div class="card-header">
-										<h4>Total Admin</h4>
+										<h4>Total Berita</h4>
 									</div>
 									<div class="card-body">
 										10
@@ -27,7 +27,7 @@
 								</div>
 								<div class="card-wrap">
 									<div class="card-header">
-										<h4>News</h4>
+										<h4>Total Suara Warga</h4>
 									</div>
 									<div class="card-body">
 										42
@@ -42,7 +42,7 @@
 								</div>
 								<div class="card-wrap">
 									<div class="card-header">
-										<h4>Reports</h4>
+										<h4>Total Penduduk</h4>
 									</div>
 									<div class="card-body">
 										1,201
@@ -57,7 +57,7 @@
 								</div>
 								<div class="card-wrap">
 									<div class="card-header">
-										<h4>Online Users</h4>
+										<h4>Total Request Surat</h4>
 									</div>
 									<div class="card-body">
 										47

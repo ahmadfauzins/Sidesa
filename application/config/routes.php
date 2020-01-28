@@ -64,6 +64,14 @@ $route['login'] = 'Auth/warga';
 // ------------------------------------------------------------------------
 $route['sa/dashboard']					= 'Superadmin/Dashboard_Controller';
 
+$route['sa/penduduk']					= 'Superadmin/Penduduk_Controller';
+$route['sa/rekomendasi']				= 'Superadmin/Rekomendasi_Controller';
+$route['sa/keuangan']					= 'Superadmin/Keuangan_Controller';
+$route['sa/profile/edit']				= 'Superadmin/Profile_Controller/edit';
+$route['sa/profile/update']				= 'Superadmin/Profile_Controller/update';
+$route['sa/profile/changepassword']		= 'Superadmin/Profile_Controller/changepassword';
+
+
 // ------------------------------------------------------------------------
 // Admin
 // ------------------------------------------------------------------------
@@ -84,7 +92,6 @@ $route['a/keuangan/insert']				= 'Admin/Keuangan_Controller/insert';
 $route['a/keuangan/edit/(:any)']		= 'Admin/Keuangan_Controller/edit/$1';
 $route['a/keuangan/update']				= 'Admin/Keuangan_Controller/update';
 $route['a/keuangan/delete/(:any)']		= 'Admin/Keuangan_Controller/delete/$1';
-
 
 $route['a/warga']						= 'Admin/Warga_Controller';
 $route['a/warga/add']					= 'Admin/Warga_Controller/add';
