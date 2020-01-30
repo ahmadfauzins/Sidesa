@@ -53,6 +53,7 @@ $route['default_controller'] = 'welcome';
 $route['auth'] = 'Auth';
 $route['auth_rt'] = 'Auth/rt';
 $route['login'] = 'Auth/warga';
+$route['berita'] = 'Berita';
 
 //  @author    Ryan Aprianto
 // ------------------------------------------------------------------------
@@ -176,17 +177,17 @@ $route['w/suara-warga/edit/(:any)']		= 'Warga/SuaraWarga_Controller/edit/$1';
 $route['w/suara-warga/update']			= 'Warga/SuaraWarga_Controller/update';
 $route['w/suara-warga/delete/(:any)']	= 'Warga/SuaraWarga_Controller/delete/$1';
 
+$route['w/profile/edit']				= 'Warga/Profile_Controller/edit';
+$route['w/profile/update']				= 'Warga/Profile_Controller/update';
+$route['w/profile/changepassword']		= 'Warga/Profile_Controller/changepassword';
+
 $route['w/surat']						= 'Warga/Surat_Controller';
 $route['w/surat/add']					= 'Warga/Surat_Controller/add';
 $route['w/surat/insert']				= 'Warga/Surat_Controller/insert';
 $route['w/surat/edit/(:any)']			= 'Warga/Surat_Controller/edit/$1';
 $route['w/surat/update']				= 'Warga/Surat_Controller/update';
 $route['w/surat/delete/(:any)']			= 'Warga/Surat_Controller/delete/$1';
-
-$route['w/profile/edit']				= 'Warga/Profile_Controller/edit';
-$route['w/profile/update']				= 'Warga/Profile_Controller/update';
-$route['w/profile/changepassword']		= 'Warga/Profile_Controller/changepassword';
-
+$route['w/e_surat']						= 'Surat/e_surat';
 
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

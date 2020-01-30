@@ -15,7 +15,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  */
 
 class M_Jurnalis extends CI_Model {
+
 	
+	public function datamodel() {
+		$load	= $this->db->query("SELECT * FROM artikel ORDER BY id DESC");
+		return $load->result_array();
+	}
 	// ------------------------------------------------------------------------
 	public function get_data()
     {

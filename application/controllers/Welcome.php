@@ -22,7 +22,8 @@ class Welcome extends CI_Controller {
 	{
 		
 		$data['isi'] ="layout/frontend/slider.php";
-
+		$data['berita'] = $this->db->query("SELECT * FROM artikel WHERE is_approved = '1'")->result_array();
+		
 		$this->load->view('index.php',$data);
 
 		
