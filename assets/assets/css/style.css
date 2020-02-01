@@ -248,8 +248,8 @@ h3 {
 }
 
 .section-padding {
-	padding-top: 120px;
-	padding-bottom: 120px
+	padding-top: 20px;
+	padding-bottom: 20px
 }
 
 .pt-120 {
@@ -407,7 +407,7 @@ h3 {
 }
 
 .boxed-btn {
-	background: #1ec6b6;
+	background: #4b78da;
 	color: #fff;
 	display: inline-block;
 	padding: 14px 44px;
@@ -415,7 +415,7 @@ h3 {
 	font-size: 14px;
 	font-weight: 400;
 	border: 0;
-	border: 1px solid #1ec6b6;
+	border: 1px solid #4b78da;
 	text-align: center;
 	color: #fff !important;
 	text-transform: uppercase;
@@ -437,10 +437,10 @@ h3 {
 }
 
 .boxed-btn3 {
-	background: #1ec6b6;
+	background: #4b78da;
 	color: #fff;
 	display: inline-block;
-	padding: 18px 41px;
+	padding: 14px 41px;
 	font-family: rubik, sans-serif;
 	font-size: 16px;
 	font-weight: 500;
@@ -454,7 +454,8 @@ h3 {
 	-moz-transition: .3s;
 	-o-transition: .3s;
 	transition: .3s;
-	cursor: pointer
+	cursor: pointer;
+	width: 100%;
 }
 
 .boxed-btn3:hover {
@@ -469,12 +470,11 @@ h3 {
 .boxed-btn3.large-width {
 	width: 220px
 }
-
-.boxed-btn4 {
-	background: #ff4a52;
+.boxed-btn5 {
+	background: #4b78da;
 	color: #fff;
 	display: inline-block;
-	padding: 13px 39px;
+	padding: 14px 41px;
 	font-family: rubik, sans-serif;
 	font-size: 16px;
 	font-weight: 500;
@@ -488,8 +488,49 @@ h3 {
 	-moz-transition: .3s;
 	-o-transition: .3s;
 	transition: .3s;
-	cursor: pointer
+	cursor: pointer;
+	width:200px;
 }
+
+
+.boxed-btn5:hover {
+	background: #3f0fc2;
+	color: #fff !important
+}
+
+.boxed-btn5:focus {
+	outline: none
+}
+
+.boxed-btn5.large-width {
+	width: 220px
+}
+
+
+
+
+.boxed-btn4 {
+	background: #f01111;
+	color: #fff;
+	display: inline-block;
+	padding: 14px 41px;
+	font-family: rubik, sans-serif;
+	font-size: 16px;
+	font-weight: 500;
+	border: 0;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	text-align: center;
+	text-transform: capitalize;
+	-webkit-transition: .3s;
+	-moz-transition: .3s;
+	-o-transition: .3s;
+	transition: .3s;
+	cursor: pointer;
+	width: 100%;
+}
+
 
 .boxed-btn4:hover {
 	background: #1ec6b6;
@@ -1120,11 +1161,11 @@ h3 {
 }
 
 .slider_bg_1 {
-	background-image: url('')
+	background-image: url(../banner/karangsari1.jpg)
 }
 
 .slider_bg_2 {
-	background-image: url(../img/banner/banner2.png)
+	background-image: url(../banner/video.png)
 }
 
 .slider_bg_3 {
@@ -1508,26 +1549,26 @@ h3 {
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	background: #040e27;
+	background: #f4f4f7;
 	position: relative;
 	z-index: 0
 }
 
 .footer .footer_top {
-	padding-top: 115px;
-	padding-bottom: 129px
+	padding-top: 75px;
+	padding-bottom: 20px
 }
 
 @media(max-width:767px) {
 	.footer .footer_top {
-		padding-top: 60px;
-		padding-bottom: 30px
+		padding-top: 70px;
+		padding-bottom: 10px
 	}
 }
 
 @media(max-width:767px) {
 	.footer .footer_top .footer_widget {
-		margin-bottom: 30px
+		margin-bottom: 10px
 	}
 }
 
@@ -1538,19 +1579,19 @@ h3 {
 }
 
 .footer .footer_top .footer_widget .links {
-	position: relative;
+	
 	top: -14px
 }
 
 .footer .footer_top .footer_widget .links.double_links li {
 	width: 50%;
-	float: left
+	float: center;
 }
 
 .footer .footer_top .footer_widget .footer_title {
 	font-size: 20px;
 	font-weight: 400;
-	color: #fff;
+	color: rgb(66, 66, 66);
 	text-transform: capitalize;
 	margin-bottom: 45px;
 	font-family: rubik, sans-serif
@@ -1561,27 +1602,32 @@ h3 {
 		margin-bottom: 20px
 	}
 }
+.tengah{
+	
+	padding-left: auto;
 
+	
+}
 .footer .footer_top .footer_widget .footer_logo {
 	font-size: 22px;
 	font-weight: 400;
-	color: #fff;
+	color: rgb(53, 53, 53);
 	text-transform: capitalize;
 	margin-bottom: 40px
 }
 
 @media(max-width:767px) {
 	.footer .footer_top .footer_widget .footer_logo {
-		margin-bottom: 20px
+		margin-bottom: 10px
 	}
 }
 
 .footer .footer_top .footer_widget p {
-	color: #aab1b7;
+	color: #0f1011;
 	font-size: 14px;
 	font-weight: 400;
 	line-height: 26px;
-	color: #aab1b7
+	color: #121416
 }
 
 .footer .footer_top .footer_widget p a {
@@ -1621,11 +1667,11 @@ h3 {
 }
 
 .footer .footer_top .footer_widget p.footer_text.doanar a.first {
-	margin-bottom: 10px
+	margin-bottom: 5px
 }
 
 .footer .footer_top .footer_widget ul li {
-	color: #acacac;
+	color: #424141;
 	font-size: 14px;
 	line-height: 36px
 }
@@ -1701,7 +1747,7 @@ h3 {
 
 .footer .footer_top .footer_widget .instagram_feed .single_insta {
 	width: 33.33%;
-	float: left;
+	
 	padding: 7.5px;
 	overflow: hidden
 }
@@ -1714,12 +1760,12 @@ h3 {
 }
 
 .footer .copy-right_text {
-	padding-bottom: 26px
+	padding-bottom: 10px
 }
 
 .footer .copy-right_text .footer_border {
-	border-top: 1px solid #363e52;
-	padding-bottom: 26px
+	border-top: 1px solid #d1d0d0;
+	padding-bottom: 10px
 }
 
 .footer .copy-right_text .copy_right {
@@ -1736,16 +1782,16 @@ h3 {
 }
 
 .footer .copy-right_text .copy_right a {
-	color: #ff4a52
+	color: #564afca2
 }
 
 .footer .socail_links {
-	margin-top: 47px
+	margin-top: 7px
 }
 
 @media(max-width:767px) {
 	.footer .socail_links {
-		margin-top: 30px
+		margin-top: 70px
 	}
 }
 
@@ -1756,11 +1802,10 @@ h3 {
 .footer .socail_links ul li a {
 	font-size: 15px;
 	color: #c3b2f0;
-	width: 30px;
+	width:40px;
 	display: inline-block;
 	text-align: center;
 	background: 0 0;
-	margin-right: 7px;
 	color: #fff;
 	line-height: 40px !important;
 	color: #e8e8e8
@@ -1900,6 +1945,12 @@ h3 {
 	width: 100%;
 	text-transform: capitalize
 }
+
+.popup_box .boxed-btn4 {
+	width: 100%;
+	text-transform: capitalize
+}
+
 
 .popup_box .popup_header {
 	background: #f5fbff;
@@ -2515,12 +2566,15 @@ h3 {
 	margin-bottom: 20px
 }
 
+.destination_details_info .contact_join .single_input select{
+	width: 100px;
+}
 .destination_details_info .contact_join .single_input input, 
 .destination_details_info .contact_join .single_input select, 
 .destination_details_info .contact_join .single_input textarea {
 	width: 100%;
 	background: #f4f4f4;
-	height: 50px;
+	height: 70px;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
@@ -2546,7 +2600,7 @@ h3 {
 	padding: 15px
 }
 
-.destination_details_info .contact_join .submit_btn button {
+.destination_details_info .contact_join .submit_btn .reset_btn button {
 	width: 100%;
 	text-align: center
 }
@@ -2636,7 +2690,7 @@ h3 {
 @media(min-width:768px) and (max-width:991px) {
 	.newletter_area .mail_form .newsletter_btn button {
 		width: auto;
-		padding: 13px 40px
+		padding: 13px 10px
 	}
 }
 
@@ -5109,7 +5163,7 @@ h6 {
 }
 
 .single-post-area .social-links {
-	padding-top: 10px
+	padding-top: 0px
 }
 
 .single-post-area .social-links li {

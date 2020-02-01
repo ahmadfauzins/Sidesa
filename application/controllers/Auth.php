@@ -103,16 +103,9 @@ class Auth extends CI_Controller
 				redirect('rt/dashboard');
 			}
 		} else {
-		echo "
-				<script>
-					alert('Access Denied');
-					history.go(-1);
-				</script>
-			";		
+			$this->session->set_flashdata('failed', 'Email atau Password Salah');
+			redirect('auth');	
 		}
-		$this->load->view('layout/backend/auth/header');
-	  	$this->load->view('auth/login');
-		$this->load->view('layout/backend/auth/footer');
 	}
 
 	public function login_rt()	
@@ -151,17 +144,10 @@ class Auth extends CI_Controller
 				redirect('rt/dashboard');
 			}
 		} else {
-			echo "
-				<script>
-					alert('Access Denied');
-					history.go(-1);
-				</script>
-			";		
+			$this->session->set_flashdata('failed', 'Email atau Password Salah');
+			redirect('auth/rt');
 		}
-		$this->load->view('layout/backend/auth/header');
-	  	$this->load->view('auth/login_rt');
-	  	$this->load->view('auth/login');
-		$this->load->view('layout/backend/auth/footer');
+		
 	}
 
 	public function login_warga()	
@@ -190,23 +176,20 @@ class Auth extends CI_Controller
 			$this->session->set_userdata($sesdata);
 			redirect('w/dashboard');
 		} else {
-			echo "
-				<script>
-					alert('Access Denied');
-					history.go(-1);
-				</script>
-			";		
+
+			$this->session->set_flashdata('failed', 'NIK atau Password Salah');
+			redirect('auth/warga');
+		
 		}
-		$this->load->view('layout/backend/auth/header');
-	  	$this->load->view('auth/login_rt');
-	  	$this->load->view('auth/login');
-		$this->load->view('layout/backend/auth/footer');
+	
 	}
 
 	public function logout()
 	{
 		$this->session->sess_destroy();
 		redirect('auth');
+		
+
 	}
 
 	public function logout_rt()
@@ -218,7 +201,7 @@ class Auth extends CI_Controller
 	public function logout_warga()
 	{
 		$this->session->sess_destroy();
-		redirect('login');
+		redirect('Welcome');
 	}
 }
 

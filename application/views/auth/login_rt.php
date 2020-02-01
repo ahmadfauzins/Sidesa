@@ -8,6 +8,12 @@
 						<div class="card card-primary mt-4">
 							<div class="card-header"><h4>Login</h4></div>
 							<div class="card-body">
+							<?php if($this->session->flashdata('failed')) { ?>
+							<div class="alert alert-danger alert-dismissible">
+								<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+								<?php echo $this->session->flashdata('failed'); ?>
+							</div>
+							<?php } ?>
 								<form method="POST" action="<?= site_url('auth/login_rt')?>" class="needs-validation" novalidate="">
 									<div class="form-group">
 										<label for="email">Email</label>

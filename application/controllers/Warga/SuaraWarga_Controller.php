@@ -61,12 +61,7 @@ class SuaraWarga_Controller extends CI_Controller
 			$this->load->view('pages/warga/suara_warga/add');
 			$this->load->view('layout/backend/footer');
 		} else {
-			echo "
-				<script>
-					alert('Access Denied');
-				  	history.go(-1);
-				</script>
-			";
+			redirect('');
 		}
 	}
 

@@ -55,6 +55,7 @@ $route['auth_rt'] = 'Auth/rt';
 $route['login'] = 'Auth/warga';
 $route['berita'] = 'Berita';
 
+
 //  @author    Ryan Aprianto
 // ------------------------------------------------------------------------
 // Custom Routing

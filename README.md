@@ -33,3 +33,12 @@ password : @pakrt02
 RT 03
 email : pakrt03@karangsari.desa.id
 password : @pakrt03
+
+Login Warga
+http://localhost/Sidesa/login
+
+Warga 1
+MIK : 33291512039800053
+password : admin
+
+

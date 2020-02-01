@@ -46,7 +46,7 @@
 									<i class="fas fa-sign-out-alt"></i> Logout
 								</a>
 							<?php } elseif ($this->session->userdata('role') === '4') { ?>
-								<a href="<?= base_url('auth_rt')?>" class="dropdown-item has-icon text-danger" style="margin-top: -30px">
+								<a href="<?= base_url('auth/logout_rt')?>" class="dropdown-item has-icon text-danger" style="margin-top: -30px">
 									<i class="fas fa-sign-out-alt"></i> Logout
 								</a>
 							<?php } elseif ($this->session->userdata('role') === '5') { ?>

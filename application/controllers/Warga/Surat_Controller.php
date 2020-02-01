@@ -132,7 +132,10 @@ class Surat_Controller extends CI_Controller
     {
 		$this->db->delete('surat', array('id' => $id));
 		redirect('w/surat');     
-    }
+	}
+	
+
+
 }
 
 

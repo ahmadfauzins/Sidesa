@@ -38,12 +38,7 @@ class Rekomendasi_Controller extends CI_Controller
 			$this->load->view('pages/rt/rekomendasi/index', $data);
 			$this->load->view('layout/backend/footer');
 		} else {
-			echo "
-				<script>
-					alert('Access Denied');
-					history.go(-1);
-				</script>
-			";
+			redirect('');
 		}
 	}
 

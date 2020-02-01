@@ -57,14 +57,14 @@
 			</div>
 			<?php } ?>
 		</div>
-			<nav>
+			<!-- <nav>
 				<ul class="control-box pager">
 					<li><a data-slide="prev" href="#myCarousel" class=""><i class="glyphicon glyphicon-chevron-left"></i></a></li>
 					<li><a data-slide="next" href="#myCarousel" class=""><i class="glyphicon glyphicon-chevron-right"></i></li>
 				</ul>
-			</nav>
+			</nav> -->
 	</div>
-	<div class="bordered_1px"></div>
+	
 </div>
 		</div></div></div>
 </div>

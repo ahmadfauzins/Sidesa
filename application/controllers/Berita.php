@@ -29,7 +29,7 @@ class Berita extends CI_Controller
  	public function index()
   	{
 
-		$data['isi']= 'pages/post-berita.php';
+		$data['isi']= 'pages/berita/berita_desa.php';
 
 		$this->load->view('index.php',$data);
 	}
@@ -37,6 +37,14 @@ class Berita extends CI_Controller
 	public function berita()
 	{
 		$this->load->view('pages/berita');
+	}
+
+	public function all()
+	{
+		
+		$data['isi']= 'pages/berita/info_berita.php';
+
+		$this->load->view('index_berita.php',$data);
 	}
 
 }

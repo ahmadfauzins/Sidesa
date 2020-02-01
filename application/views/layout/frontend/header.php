@@ -72,7 +72,7 @@
 
  										<li><a href="#">Berita Desa<i class="ti-angle-down"></i></a>
  											<ul class="submenu">
- 												<li><a href="#">Blog Warga</a></li>
+ 												<li><a href="<?= base_url('berita/all')?>">Berita Warga</a></li>
  												<li><a href="#">Suara Warga</a></li>
  											</ul>
  										</li>
