@@ -160,8 +160,7 @@ class SuaraWarga_Controller extends CI_Controller
 		);
 		
 		$where = array('id' => $id);
-		$this->M_SuaraWarga->update_data('suara_warga', $data, $where);
-		redirect('w/suara-warga');     
+		$this->M_SuaraWarga->update_data('suara_warga', $data, $where);   
 	}
 
 	public function delete($id)

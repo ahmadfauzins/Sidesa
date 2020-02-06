@@ -21,6 +21,8 @@
 	  <!-- Page Specific JS File -->
 	  <script src="<?= base_url('')?>assets/backend/js/page/index-0.js"></script>
 
+	  <script type="text/javascript" src="<?= base_url('')?>assets/backend/js/sweet.js"></script>
+
 </body>
 
 </html>

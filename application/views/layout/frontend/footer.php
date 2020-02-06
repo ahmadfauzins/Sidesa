@@ -33,7 +33,8 @@
 
 								Copyright &copy;<script type="text/javascript">
 									document.write(new Date().getFullYear());
-								</script> All rights reserved | Development with <i class="fa fa-heart-o"
+								</script> 
+								All rights reserved | Development with <i class="fa fa-heart-o"
 									aria-hidden="true"></i> by <a href="https://pripay.net/" target="_blank">anakdesa.ID</a>
 
 							</p>

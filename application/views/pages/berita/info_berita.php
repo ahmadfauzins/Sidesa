@@ -94,7 +94,7 @@
 <link rel="shortcut icon" type="image/x-icon" href="<?php echo base_url('assets/assets/img/favicon.ico');?>">
 <link href="<?php echo base_url('assets/frontend/css/base.css');?>" rel="stylesheet">
 <script src="<?php echo base_url('assets/frontend/js/jquery.min.js');?>"></script>
-  <!-- <script src="<?php echo base_url('assets/frontend/js/popper.min.js');?>"></script>
+  <script src="<?php echo base_url('assets/frontend/js/popper.min.js');?>"></script>
   <script src="<?php echo base_url('assets/frontend/js/bootstrap.min.js');?>"></script>
   <script src="<?php echo base_url('assets/frontend/js/bootstrap-dropdownhover.min.js');?>"></script>
   <script src="<?php echo base_url('assets/frontend/js/fontawesome-all.js');?>"></script>
@@ -106,7 +106,7 @@
   <script src="<?php echo base_url('assets/frontend/js/jquery.counterup.min.js');?>"></script>
   <script src="<?php echo base_url('assets/frontend/js/jquery.easypiechart.min.js');?>"></script>
   <script src="<?php echo base_url('assets/frontend/js/jquery.appear.js');?>"></script>
-  <script src="<?php echo base_url('assets/frontend/js/wow.min.js');?>"></script> -->
+  <script src="<?php echo base_url('assets/frontend/js/wow.min.js');?>"></script>
 
   <!-- JQuery Map Plugin -->
   <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
@@ -117,4 +117,4 @@
   <script type="text/javascript" src="<?php echo base_url('assets/frontend/js/masonary-custom.js');?>"></script>
   
 
-  <!-- <script src="<?php echo base_url('assets/frontend/js/site-custom.js');?>"></script>   -->
+  <script src="<?php echo base_url('assets/frontend/js/site-custom.js');?>"></script>  

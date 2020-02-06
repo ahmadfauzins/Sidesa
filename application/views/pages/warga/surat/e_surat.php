@@ -10,9 +10,9 @@
 							<h6 style="font-size: 0.8rem">Silahkan Lengkapi Data Sesuai dengan Keperluan</h6>
 							<div class="row">
 
-								<div class="col-lg-12" style="margin-bottom: 10px;">
+								<div class="col-lg-12">
 									<div class="single_input">
-										<select style="margin-bottom: 10px;" type="text" name="type"
+										<select type="text" name="type"
 											placeholder="Jenis Surat Keterangan" required>
 											<option value="Surat Keterangan Usaha">-- Jenis Layanan Surat Keterangan
 												Desa --</option>
@@ -74,6 +74,7 @@
 									</div>
 								</div>
 							</div>
+							<br>
 							<br>
 							</p> Bingung Cara Menggunakan nya? <a href="#"> Lihat Cara Mengisi </a></p>
 							

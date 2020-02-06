@@ -36,11 +36,11 @@
 									$minutes= (int)$interval->format('%i');
 
 									if ($years > 0) {
-										echo $years.' tahun '.$months.' bulan '.$days.' hari '.$hours.' jam '.$minutes.' menit yang lalu.';
+										echo $years.' tahun yang lalu.';
 									} elseif ($months > 0) {
-										echo $months.' bulan '.$days.' hari '.$hours.' jam '.$minutes.' menit yang lalu.';
+										echo $months.' bulan yang lalu.';
 									} elseif ($days > 0) {
-										echo $days.' hari '.$hours.' jam '.$minutes.' menit yang lalu.';
+										echo $days.' hari yang lalu.';
 									} elseif ($hours > 0) {
 										echo $hours.' jam '.$minutes.' menit yang lalu.';
 									} else {

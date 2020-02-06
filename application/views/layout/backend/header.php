@@ -18,6 +18,7 @@
 	<!-- Template CSS -->
 	<link rel="stylesheet" href="<?= base_url('')?>assets/backend/css/style.css">
 	<link rel="stylesheet" href="<?= base_url('')?>assets/backend/css/components.css">
+	
 </head>
 
 <body>

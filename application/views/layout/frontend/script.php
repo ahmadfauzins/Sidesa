@@ -19,33 +19,37 @@
 
 
 
-<script src="<?php echo base_url('assets/assets/js/vendor/modernizr-3.5.0.min.js');?>" type="30d9825f3ca27cf76c668f74-text/javascript"></script>
-<script src="<?php echo base_url('assets/assets/js/vendor/jquery-1.12.4.min.js');?>" type="30d9825f3ca27cf76c668f74-text/javascript"></script>
-<script src="<?php echo base_url('assets/assets/js/popper.min.js');?>" type="30d9825f3ca27cf76c668f74-text/javascript"></script>
-<script src="<?php echo base_url('assets/assets/js/bootstrap.min.js');?>" type="30d9825f3ca27cf76c668f74-text/javascript"></script>
-<script src="<?php echo base_url('assets/assets/js/owl.carousel.min.js');?>" type="30d9825f3ca27cf76c668f74-text/javascript"></script>
-<script src="<?php echo base_url('assets/assets/js/isotope.pkgd.min.js');?>" type="30d9825f3ca27cf76c668f74-text/javascript"></script>
-<script src="<?php echo base_url('assets/assets/js/ajax-form.js');?>" type="30d9825f3ca27cf76c668f74-text/javascript"></script>
-<script src="<?php echo base_url('assets/assets/js/waypoints.min.js');?>" type="30d9825f3ca27cf76c668f74-text/javascript"></script>
-<script src="<?php echo base_url('assets/assets/js/jquery.counterup.min.js');?>" type="30d9825f3ca27cf76c668f74-text/javascript"></script>
-<script src="<?php echo base_url('assets/assets/js/imagesloaded.pkgd.min.js');?>" type="30d9825f3ca27cf76c668f74-text/javascript"></script>
-<script src="<?php echo base_url('assets/assets/js/scrollIt.js');?>" type="30d9825f3ca27cf76c668f74-text/javascript"></script>
-<script src="<?php echo base_url('assets/assets/js/jquery.scrollUp.min.js');?>" type="30d9825f3ca27cf76c668f74-text/javascript"></script>
-<script src="<?php echo base_url('assets/assets/js/wow.min.js');?>" type="30d9825f3ca27cf76c668f74-text/javascript"></script>
-<script src="<?php echo base_url('assets/assets/js/nice-select.min.js');?>" type="30d9825f3ca27cf76c668f74-text/javascript"></script>
-<script src="<?php echo base_url('assets/assets/js/jquery.slicknav.min.js');?>" type="30d9825f3ca27cf76c668f74-text/javascript"></script>
-<script src="<?php echo base_url('assets/assets/js/jquery.magnific-popup.min.js');?>" type="30d9825f3ca27cf76c668f74-text/javascript"></script>
-<script src="<?php echo base_url('assets/assets/js/plugins.js');?>" type="30d9825f3ca27cf76c668f74-text/javascript"></script>
-<script src="<?php echo base_url('assets/assets/js/gijgo.min.js');?>" type="30d9825f3ca27cf76c668f74-text/javascript"></script>
-<script src="<?php echo base_url('assets/assets/js/slick.min.js');?>" type="30d9825f3ca27cf76c668f74-text/javascript"></script>
+<script src="<?php echo base_url('assets/assets/js/vendor/modernizr-3.5.0.min.js');?>" type="text/javascript"></script>
+<script src="<?php echo base_url('assets/assets/js/vendor/jquery-1.12.4.min.js');?>" type="text/javascript"></script>
+<script src="<?php echo base_url('assets/assets/js/popper.min.js');?>" type="text/javascript"></script>
+<script src="<?php echo base_url('assets/assets/js/bootstrap.min.js');?>" type="text/javascript"></script>
+<script src="<?php echo base_url('assets/assets/js/owl.carousel.min.js');?>" type="text/javascript"></script>
+<script src="<?php echo base_url('assets/assets/js/isotope.pkgd.min.js');?>" type="text/javascript"></script>
+<script src="<?php echo base_url('assets/assets/js/ajax-form.js');?>" type="text/javascript"></script>
+<script src="<?php echo base_url('assets/assets/js/waypoints.min.js');?>" type="text/javascript"></script>
+<script src="<?php echo base_url('assets/assets/js/jquery.counterup.min.js');?>" type="text/javascript"></script>
+<script src="<?php echo base_url('assets/assets/js/imagesloaded.pkgd.min.js');?>" type="text/javascript"></script>
+<script src="<?php echo base_url('assets/assets/js/scrollIt.js');?>" type="text/javascript"></script>
+<script src="<?php echo base_url('assets/assets/js/jquery.scrollUp.min.js');?>" type="text/javascript"></script>
+<script src="<?php echo base_url('assets/assets/js/wow.min.js');?>" type="text/javascript"></script>
+<script src="<?php echo base_url('assets/assets/js/nice-select.min.js');?>" type="text/javascript"></script>
+<script src="<?php echo base_url('assets/assets/js/jquery.slicknav.min.js');?>" type="text/javascript"></script>
+<script src="<?php echo base_url('assets/assets/js/jquery.magnific-popup.min.js');?>" type="text/javascript"></script>
+<script src="<?php echo base_url('assets/assets/js/plugins.js');?>" type="text/javascript"></script>
+<script src="<?php echo base_url('assets/assets/js/gijgo.min.js');?>" type="text/javascript"></script>
+<script src="<?php echo base_url('assets/assets/js/slick.min.js');?>" type="text/javascript"></script>
 
-<script src="<?php echo base_url('assets/assets/js/contact.js');?>" type="30d9825f3ca27cf76c668f74-text/javascript"></script>
-<script src="<?php echo base_url('assets/assets/js/jquery.ajaxchimp.min.js');?>" type="30d9825f3ca27cf76c668f74-text/javascript"></script>
-<script src="<?php echo base_url('assets/assets/js/jquery.form.js');?>" type="30d9825f3ca27cf76c668f74-text/javascript"></script>
-<script src="<?php echo base_url('assets/assets/js/jquery.validate.min.js');?>" type="30d9825f3ca27cf76c668f74-text/javascript"></script>
-<script src="<?php echo base_url('assets/assets/js/mail-script.js');?>" type="30d9825f3ca27cf76c668f74-text/javascript"></script>
-<script src="<?php echo base_url('assets/assets/js/main.js');?>" type="30d9825f3ca27cf76c668f74-text/javascript"></script>
-<script type="30d9825f3ca27cf76c668f74-text/javascript">
+<script src="<?php echo base_url('assets/assets/js/contact.js');?>" type="text/javascript"></script>
+<script src="<?php echo base_url('assets/assets/js/jquery.ajaxchimp.min.js');?>" type="text/javascript"></script>
+<script src="<?php echo base_url('assets/assets/js/jquery.form.js');?>" type="text/javascript"></script>
+<script src="<?php echo base_url('assets/assets/js/jquery.validate.min.js');?>" type="text/javascript"></script>
+<script src="<?php echo base_url('assets/assets/js/mail-script.js');?>" type="text/javascript"></script>
+<!-- <script src="<?php echo base_url('assets/assets/js/main.js');?>" type="text/javascript"></script> -->
+<script src="<?php echo base_url('assets/assets/js/jquery-ui.min.js');?>" type="text/javascript"></script>
+
+
+
+<script type="text/javascript">
         $('#datepicker').datepicker({
             iconsLibrary: 'fontawesome',
             icons: {
@@ -54,12 +58,12 @@
         });
     </script>
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13" type="30d9825f3ca27cf76c668f74-text/javascript"></script>
-<script type="30d9825f3ca27cf76c668f74-text/javascript">
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13" type="text/javascript"></script>
+<script type="text/javascript">
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
   gtag('config', 'UA-23581568-13');
 </script>
-<script src="<?php echo base_url('assets/assets/js/rocket-loader.min.js');?>" data-cf-settings="30d9825f3ca27cf76c668f74-|49" defer=""></script></body>
+<script src="<?php echo base_url('assets/assets/js/rocket-loader.min.js');?>" data-cf-settings="|49" defer=""></script></body>
